@@ -27,9 +27,9 @@
             <div class="columns">
 
                 <!-- Ingredient Entry Column -->
-                <div class="aside column">
+                <div class="column is one-third">
                     <form id="ingredientForm">
-                        <label for="ingredientInput" class="label">Enter an Ingredient:</label>
+                        <h5 class = "title is-5">Ingredient Name</h5>
                         <div class="field">
                             <div class="control">
                                 <input type="text" id="ingredientInput" class="input" placeholder="Ingredient">
@@ -50,10 +50,20 @@
                     </div>
                 </div>
 
-                <!-- Recipe Display Column -->
-                <div class="column">
-                    <!-- Recipes go here-->
-                </div>
+                <div class="column is-two-thirds">
+                <section id="ingredientDetails" class="mt-4">
+                    <h5 class="title is-5">Ingredient Details</h5>
+                    <div id="ingredientContainer" class="box">
+
+                        <h3 id="ingredientLabel" class="title is-3">Ingredient Label</h3>
+                        <h6 class="my-3 mt-3" id="calories">Calories: </h6>
+                        <h6 class="my-3" id="protein">Protein: </h6>
+                        <h6 class="my-3" id="fat">Fat: </h6>
+                        <h6 class="my-3" id="carbohydrates">Carbohydrates: </h6>
+                        <h6 class="my-3" id="fiber">Fiber: </h6>
+                    </div>
+                </section>
+            </div>
 
             </div>
         </div>
