@@ -40,10 +40,9 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 ## **License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## **Top Technologies used
+## **Top Technologies Used**
 
 <!-- ![Static Badge](https://img.shields.io/badge/BULMA-b?style=flat-square&logo=bulma&logoColor=black&color=Green)
-[![npm version](https://badge.fury.io/js/bulma.svg)](https://badge.fury.io/js/bulma)
 
 ![Static Badge](https://img.shields.io/badge/JSON-j?style=flat-square&logo=json&color=yellow)
 ![Static Badge](https://img.shields.io/badge/SLACK-s?style=flat-square&logo=slack&logoColor=black&color=blue)
@@ -56,11 +55,11 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 ![Static Badge](https://img.shields.io/badge/GITLAB-g?style=flat-square&logo=gitlab&color=grey)
 ![Static Badge](https://img.shields.io/badge/GITHUB-g?style=flat-square&logo=github&logoColor=black&color=cyan)
 
-
+<!-- 
 ![Static Badge](https://img.shields.io/badge/mdn%20web%20docs-m?style=flat-square&logo=mdnwebdocs&logoColor=black&color=blue)
-![Static Badge](https://img.shields.io/badge/W3%20Schools-w?style=flat-square&logo=w3schools&logoColor=black&color=green)
+![Static Badge](https://img.shields.io/badge/W3%20Schools-w?style=flat-square&logo=w3schools&logoColor=black&color=green) -->
 
- [![npm version](https://badge.fury.io/js/bulma.svg)](https://badge.fury.io/js/bulma) -->
+ <!-- [![npm version](https://badge.fury.io/js/bulma.svg)](https://badge.fury.io/js/bulma)  -->
 
 
 ![Bulma](https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white)
