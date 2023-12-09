@@ -1,22 +1,33 @@
 # ***Food and Recipes***
 
 ## **Description**
-  Welcome to our project! This ia a Food and Recipes app made with a Bulma framework. It allows users to search an ingredient and receive the nutrition information and recipes. 
+  Welcome to our project! This ia a Food and Recipes app made with a Bulma framework. It allows users to search an ingredient and receive the nutrition information and recipes based on the ingredient they choose. 
 
-
-## **How to install and run the project**
-
-
-
-
-
+## **Key Topics**
+- Ingredient search
+- Ingredient and recipe save
+- Recipe search
 
 ## **How to Use the Project**
 - When you start you enter an ingredient into the search field.
-- Once you click 
+    [ pic placeholder ]
 
+- You will see the ingredients
+    [ pic placeholder ]
 
+- You can save the ingredient for future use
+    [ pic placeholder ]
 
+- You can click Recipes button to get recipes
+    [ pic placeholder ]
+
+  
+## **Learning Objectives**
+- You will be able to gather nutrition information based on the ingredient you entered into the search field.
+- From the ingredient chosen you will be able to also view recipes that have your ingredient choice.
+- You will now be able to see the nutritional information for that ingredient.
+- You will be able to view recipes for its nutritional information.
+- With having the nutritional information about a single ingredient and the recipes you will be able to make an informed decision on your food intake.
 
  ## **Credits**
 
@@ -24,5 +35,8 @@
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [W3 Schools](https://www.w3schools.com/)
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+- [badges](https://shields.io/badges)
+
+
 
 
