@@ -99,11 +99,15 @@ function updateSavedIngredients() {
     savedIngredientsContainer.appendChild(button);
   });
 
+ var inputSection = document.querySelector('#input')
  var recipesBtn = document.querySelector('.recipes-btn');
-
  recipesBtn.addEventListener('click', function(){
   fetchRecipeApi().then(function(result) {
     console.log(result);
+  
+  //clear out ingredient once submitted
+ $("#ingredientInput").val("");
+  console.log(test);
   });
  });
  
