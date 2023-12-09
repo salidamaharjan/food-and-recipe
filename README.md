@@ -35,8 +35,20 @@
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [W3 Schools](https://www.w3schools.com/)
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-- [badges](https://shields.io/badges)
+- [Static Badges](https://shields.io/badges)
+
+
+#
+
+![Static Badge](https://img.shields.io/badge/BULMA-b?style=flat-square&logo=bulma&logoColor=black&color=Green)
+![Static Badge](https://img.shields.io/badge/JSON-j?style=flat-square&logo=json&color=yellow)
 
 
 
+![Static Badge](https://img.shields.io/badge/GITLAB-g?style=flat-square&logo=gitlab&color=grey)
+![Static Badge](https://img.shields.io/badge/GITHUB-g?style=flat-square&logo=github&logoColor=black&color=cyan)
+
+
+![Static Badge](https://img.shields.io/badge/w3schools-w?logo=json&logoColor=Red&labelColor=purple&color=green)
+![Static Badge](https://img.shields.io/badge/mdnwebdocs-m?logo=mdnwebdocs&color=brown)
 
