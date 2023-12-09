@@ -8,6 +8,11 @@ form.addEventListener("submit", function (event) {
   fetchNutrientApi();
 });
 
+// Call updateSavedIngredients when the page loads
+window.addEventListener('load', function () {
+  updateSavedIngredients();
+});
+
 function fetchNutrientApi() {
   var inputSection = document.querySelector("#ingredientInput");
   var value = inputSection.value;
@@ -33,8 +38,12 @@ function saveIngredientToLocalStorage(ingredient) {
   // Get existing saved ingredients from local storage
   var savedIngredients = JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
-  // Add the new ingredient to the array
-  savedIngredients.push(ingredient);
+  // Add the new ingredient to the top of the Array
+  savedIngredients.unshift(ingredient);
+  //Maximum number of history items is 15
+  if (savedIngredients.length > 15) {
+      savedIngredients = savedIngredients.slice(0, 15);
+  }
   // Save the updated array back to local storage
   localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
   
@@ -47,10 +56,11 @@ function saveIngredientToLocalStorage(ingredient) {
 
 // Update saved ingredients in the "Saved Ingredients" section
 function updateSavedIngredients() {
-  var savedIngredientsContainer = document.getElementById("savedIngredients");
+  var savedIngredientsContainer = document.getElementById("ingredientButtons");
   var savedIngredientsList = document.getElementById("ingredientList");
 
   // Clear existing content
+  savedIngredientsContainer.innerHTML = "";
   savedIngredientsList.innerHTML = "";
 
   // Get saved ingredients from local storage
@@ -58,9 +68,16 @@ function updateSavedIngredients() {
 
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
-      var listItem = document.createElement("li");
-      listItem.textContent = ingredient;
-      savedIngredientsList.appendChild(listItem);
+      var button = document.createElement("button");
+      button.classList.add("button", "is-medium", "is-info", "mr-2");
+      button.textContent = ingredient;
+
+    // Attach a click event listener to each button
+    button.addEventListener("click", function () {
+      // Handle the click event 
+      console.log("Button clicked for ingredient:", ingredient);
+    });
+    savedIngredientsContainer.appendChild(button);
   });
 
  var recipesBtn = document.querySelector('.recipes-btn');
