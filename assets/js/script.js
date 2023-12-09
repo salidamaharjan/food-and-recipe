@@ -29,10 +29,29 @@ function fetchNutrientApi() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-    });
-}
+      console.log(`API Response:`,data);
 
+  // Access the first item in the "hints" array
+  if (data.hints && data.hints.length > 0) {
+    var firstHint = data.hints[0];
+
+        // Log general information about the food
+        console.log('Food label:', firstHint.food.label);
+        console.log('Category:', firstHint.food.category);
+        console.log('Image:', firstHint.food.image);
+
+  // Log nutritional information
+  if (firstHint.food.nutrients) {
+        var nutrients = firstHint.food.nutrients;
+        console.log('Calories:', nutrients.ENERC_KCAL);
+        console.log('Protein:', nutrients.PROCNT);
+        console.log('Fat:', nutrients.FAT);
+        console.log('Carbohydrates:', nutrients.CHOCDF);
+        console.log('Fiber:', nutrients.FIBTG);
+        }
+     }}
+    )
+  };
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
   // Get existing saved ingredients from local storage
