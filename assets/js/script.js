@@ -110,7 +110,7 @@ function updateSavedIngredients() {
 }
 
 function recipeBox(recipes) {
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < recipes.hits.length; i++) {
     var displayedRecipes = document.querySelector(".displayed-recipes");
     var recipeEl = constructRecipeBoxInfo(recipes.hits[i].recipe);
     displayedRecipes.append(recipeEl);
