@@ -132,22 +132,34 @@ function constructRecipeBoxInfo(recipe) {
                     >
                       ${recipe.label}
                     </div>
-                    <img class="recipe-image" src="${recipe.images.THUMBNAIL.url}" alt="recipe image" />
+                    <img class="recipe-image" src="${
+                      recipe.images.THUMBNAIL.url
+                    }" alt="recipe image" />
                     <ul class="recipe-nutrients">
                       <li class="recipe-calorie has-text-white is-size-7">
-                        Calorie: <span>${Math.round(recipe.totalNutrients.ENERC_KCAL.quantity)} ${recipe.totalNutrients.ENERC_KCAL.unit}</span> 
+                        Calorie: <span>${Math.round(
+                          recipe.totalNutrients.ENERC_KCAL.quantity
+                        )} ${recipe.totalNutrients.ENERC_KCAL.unit}</span> 
                       </li>
                       <li class="recipe-protein has-text-white is-size-7">
-                        Protein: <span>${Math.round(recipe.totalNutrients.PROCNT.quantity)} ${recipe.totalNutrients.PROCNT.unit}</span>
+                        Protein: <span>${Math.round(
+                          recipe.totalNutrients.PROCNT.quantity
+                        )} ${recipe.totalNutrients.PROCNT.unit}</span>
                       </li>
                       <li class="recipe-fat has-text-white is-size-7">
-                        Fat: <span>${Math.round(recipe.totalNutrients.FAT.quantity)} ${recipe.totalNutrients.FAT.unit}</span>
+                        Fat: <span>${Math.round(
+                          recipe.totalNutrients.FAT.quantity
+                        )} ${recipe.totalNutrients.FAT.unit}</span>
                       </li>
                       <li class="recipe-carbs has-text-white is-size-7">
-                        Carbohydrates: <span>${Math.round(recipe.totalNutrients.CHOCDF.quantity)} ${recipe.totalNutrients.CHOCDF.unit}</span>
+                        Carbohydrates: <span>${Math.round(
+                          recipe.totalNutrients.CHOCDF.quantity
+                        )} ${recipe.totalNutrients.CHOCDF.unit}</span>
                       </li>
                       <li class="recipe-fiber has-text-white is-size-7">
-                        Fiber: <span>${Math.round(recipe.totalNutrients.FIBTG.quantity)} ${recipe.totalNutrients.FIBTG.unit}</span>
+                        Fiber: <span>${Math.round(
+                          recipe.totalNutrients.FIBTG.quantity
+                        )} ${recipe.totalNutrients.FIBTG.unit}</span>
                       </li>
                     </ul>
                     <button class="button btn-recipe-view is-small mt-3">
@@ -159,6 +171,10 @@ function constructRecipeBoxInfo(recipe) {
 async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
+  //recipe API will not be fetched if ingredient input is empty
+  if (value.trim() === "") {
+    return;
+  }
   var response = await fetch(
     `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
       value
