@@ -10,7 +10,7 @@ form.addEventListener("submit", function (event) {
 });
 
 // Call updateSavedIngredients when the page loads
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   updateSavedIngredients();
 });
 
@@ -32,33 +32,34 @@ function fetchNutrientApi() {
       return response.json();
     })
     .then(function (data) {
-      console.log(`API Response:`,data);
+      console.log(`API Response:`, data);
 
-  // Access the first item in the "hints" array
-  if (data.hints && data.hints.length > 0) {
-    var firstHint = data.hints[0];
+      // Access the first item in the "hints" array
+      if (data.hints && data.hints.length > 0) {
+        var firstHint = data.hints[0];
 
         // Log general information about the food
-        console.log('Food label:', firstHint.food.label);
-        console.log('Category:', firstHint.food.category);
-        console.log('Image:', firstHint.food.image);
+        console.log("Food label:", firstHint.food.label);
+        console.log("Category:", firstHint.food.category);
+        console.log("Image:", firstHint.food.image);
 
-  // Log nutritional information
-  if (firstHint.food.nutrients) {
-        var nutrients = firstHint.food.nutrients;
-        console.log('Calories:', nutrients.ENERC_KCAL);
-        console.log('Protein:', nutrients.PROCNT);
-        console.log('Fat:', nutrients.FAT);
-        console.log('Carbohydrates:', nutrients.CHOCDF);
-        console.log('Fiber:', nutrients.FIBTG);
+        // Log nutritional information
+        if (firstHint.food.nutrients) {
+          var nutrients = firstHint.food.nutrients;
+          console.log("Calories:", nutrients.ENERC_KCAL);
+          console.log("Protein:", nutrients.PROCNT);
+          console.log("Fat:", nutrients.FAT);
+          console.log("Carbohydrates:", nutrients.CHOCDF);
+          console.log("Fiber:", nutrients.FIBTG);
         }
-     }}
-    )
-  };
+      }
+    });
+}
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
   // Get existing saved ingredients from local storage
-  var savedIngredients = JSON.parse(localStorage.getItem("savedIngredients")) || [];
+  var savedIngredients =
+    JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
   // making sure the saved ingredient do not duplicate in list
   if(!savedIngredients.includes(ingredient) && ingredient.length >0) {
@@ -88,18 +89,18 @@ function updateSavedIngredients() {
   savedIngredientsList.innerHTML = "";
 
   // Get saved ingredients from local storage
-  var savedIngredients = JSON.parse(localStorage.getItem("savedIngredients")) || [];
+  var savedIngredients =
+    JSON.parse(localStorage.getItem("savedIngredients")) || [];
 
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
     var button = document.createElement("button");
     button.classList.add("button", "is-medium", "is-info", "mr-2");
     button.textContent = ingredient;
-   
 
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
-      // Handle the click event 
+      // Handle the click event
       console.log("Button clicked for ingredient:", ingredient);
       
       console.log(searchBtn);
@@ -108,23 +109,79 @@ function updateSavedIngredients() {
   });
 
   var inputSection = document.querySelector('#input');
-  var recipesBtn = document.querySelector('.recipes-btn');
-  recipesBtn.addEventListener('click', function(){
-  fetchRecipeApi().then(function(result) {
-    console.log(result);
-  //clear out ingredient once submitted
-  $("#ingredientInput").val("");
-  //console.log(ingredientInput.val);
+  var recipesBtn = document.querySelector(".recipes-btn");
+
+  recipesBtn.addEventListener("click", async function () {
+    var recipeResult = await fetchRecipeApi();
+    console.log(recipeResult);
+
+    //clear out ingredient once submitted
+    $("#ingredientInput").val("");
+    //console.log(ingredientInput.val);
+
+    displayRecipeBox(recipeResult);
   });
- });
- 
- async function fetchRecipeApi() {
+}
+
+//displays the available recipe in the UI
+function displayRecipeBox(recipes) {
+  //the length hits may not be uniform so using hits.length
+  for (var i = 0; i < recipes.hits.length; i++) {
+    var displayedRecipes = document.querySelector(".displayed-recipes");
+    var recipeEl = constructRecipeBoxInfo(recipes.hits[i].recipe);
+    displayedRecipes.append(recipeEl);
+  }
+}
+//creating new element according to the recipe and return created element
+function constructRecipeBoxInfo(recipe) {
+  console.log(recipe);
+  var divEl = document.createElement("div");
+  divEl.setAttribute("class", "column is-4");
+  divEl.innerHTML = `
+                  <div
+                    class="recipe box has-background-primary-dark is-flex is-flex-direction-column"
+                  >
+                    <div
+                      class="recipe-name has-text-white has-text-weight-bold is-size-6"
+                    >
+                      ${recipe.label}
+                    </div>
+                    <img class="recipe-image" src="${recipe.images.THUMBNAIL.url}" alt="recipe image" />
+                    <ul class="recipe-nutrients">
+                      <li class="recipe-calorie has-text-white is-size-7">
+                        Calorie: <span>${Math.round(recipe.totalNutrients.ENERC_KCAL.quantity)} ${recipe.totalNutrients.ENERC_KCAL.unit}</span> 
+                      </li>
+                      <li class="recipe-protein has-text-white is-size-7">
+                        Protein: <span>${Math.round(recipe.totalNutrients.PROCNT.quantity)} ${recipe.totalNutrients.PROCNT.unit}</span>
+                      </li>
+                      <li class="recipe-fat has-text-white is-size-7">
+                        Fat: <span>${Math.round(recipe.totalNutrients.FAT.quantity)} ${recipe.totalNutrients.FAT.unit}</span>
+                      </li>
+                      <li class="recipe-carbs has-text-white is-size-7">
+                        Carbohydrates: <span>${Math.round(recipe.totalNutrients.CHOCDF.quantity)} ${recipe.totalNutrients.CHOCDF.unit}</span>
+                      </li>
+                      <li class="recipe-fiber has-text-white is-size-7">
+                        Fiber: <span>${Math.round(recipe.totalNutrients.FIBTG.quantity)} ${recipe.totalNutrients.FIBTG.unit}</span>
+                      </li>
+                    </ul>
+                    <button class="button btn-recipe-view is-small mt-3">
+                      View Recipe
+                    </button>
+                  </div>`;
+  return divEl;
+}
+
+async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
   //strip out anything other than letters and spaces
   value = value.replace(regexNotLettersSpaces, "");
-  var response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(value)}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`);
+  var response = await fetch(
+    `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
+      value
+    )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
+  );
+  // var response = await fetch(`./assets/js/recipe.json`);
   var result = await response.json();
   return result;
-}}
-
+}
