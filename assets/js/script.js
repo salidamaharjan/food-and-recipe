@@ -57,20 +57,22 @@ function saveIngredientToLocalStorage(ingredient) {
   // Get existing saved ingredients from local storage
   var savedIngredients = JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
-  // Add the new ingredient to the top of the Array
-  savedIngredients.unshift(ingredient);
-  //Maximum number of history items is 15
-  if (savedIngredients.length > 15) {
-      savedIngredients = savedIngredients.slice(0, 15);
+  // making sure the saved ingredient do not duplicate in list
+  if(!savedIngredients.includes(ingredient)) {
+    // Add the new ingredient to the top of the Array
+    savedIngredients.unshift(ingredient);
+    //Maximum number of history items is 15
+    if (savedIngredients.length > 15) {
+        savedIngredients = savedIngredients.slice(0, 15);
+    }
+    // Save the updated array back to local storage
+    localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
+    
+    console.log("Ingredient saved to local storage:", ingredient);
+
+    // Update the displayed saved ingredients
+    updateSavedIngredients();
   }
-  // Save the updated array back to local storage
-  localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
-  
-  console.log("Ingredient saved to local storage:", ingredient);
-
-  // Update the displayed saved ingredients
-  updateSavedIngredients();
-
 }
 
 // Update saved ingredients in the "Saved Ingredients" section
@@ -87,27 +89,29 @@ function updateSavedIngredients() {
 
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
-      var button = document.createElement("button");
-      button.classList.add("button", "is-medium", "is-info", "mr-2");
-      button.textContent = ingredient;
+    var button = document.createElement("button");
+    button.classList.add("button", "is-medium", "is-info", "mr-2");
+    button.textContent = ingredient;
+   
 
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
       // Handle the click event 
       console.log("Button clicked for ingredient:", ingredient);
+      
+      console.log(searchBtn);
     });
     savedIngredientsContainer.appendChild(button);
   });
 
- var inputSection = document.querySelector('#input')
- var recipesBtn = document.querySelector('.recipes-btn');
- recipesBtn.addEventListener('click', function(){
+  var inputSection = document.querySelector('#input');
+  var recipesBtn = document.querySelector('.recipes-btn');
+  recipesBtn.addEventListener('click', function(){
   fetchRecipeApi().then(function(result) {
     console.log(result);
-  
   //clear out ingredient once submitted
- $("#ingredientInput").val("");
-  console.log(test);
+  $("#ingredientInput").val("");
+  //console.log(ingredientInput.val);
   });
  });
  
