@@ -1,0 +1,1271 @@
+{
+    "text": "chi",
+    "parsed": [],
+    "hints": [
+        {
+            "food": {
+                "foodId": "food_asj0z2pb0a9u5bbvv8xawandy74h",
+                "label": "Chi Chi",
+                "knownAs": "Chi Chi",
+                "nutrients": {
+                    "ENERC_KCAL": 70.9233851922628,
+                    "PROCNT": 0.30433835912979657,
+                    "FAT": 1.2668603756688137,
+                    "CHOCDF": 8.039357154294567,
+                    "FIBTG": 0.3681088807411696
+                },
+                "category": "Generic meals",
+                "categoryLabel": "meal",
+                "foodContentsLabel": "vodka; pineapple juice; cream of coconut; pineapple; cherry; ice"
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+                    "label": "Whole",
+                    "weight": 383.7988154083487
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 383.7988154083487
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+                    "label": "Cup",
+                    "weight": 240.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+                    "label": "Milliliter",
+                    "weight": 1.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_ah4xxfab0y4n6ha6cuo8rblnq409",
+                "label": "Chi-Chi's - Mojito",
+                "knownAs": "Chi-chi's - Mojito",
+                "nutrients": {
+                    "ENERC_KCAL": 194.00679072269227,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 52.910942924370616,
+                    "FIBTG": 0.0
+                },
+                "brand": "Thompson Cellars Company",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Contains High Fructose Corn Syrup; Water; Concentrated Lime Juice; Less Than 1% Of; Natural Flavors; Citric Acid; Provides Tartness",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                        "label": "Ounce",
+                        "quantity": 2.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 56.69904625
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_ame94lgajmz4oxbi5f1kka89gfrp",
+                "label": "Chi-Chi's Pina Colada",
+                "knownAs": "Chi-chi's Pina Colada",
+                "nutrients": {
+                    "ENERC_KCAL": 29.716566417246813,
+                    "PROCNT": 0.2285889724403601,
+                    "FAT": 0.0,
+                    "CHOCDF": 7.086258145651163,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Corn Syrup; Flour; Sugar; Water; Corn Starch; Glycerine; Salt; Artificial Flavor; Partially Hydrogenated Soybean Oil; Glycerol Monostearate; Citric Acid; Lecithin; Artificial Color",
+                "image": "https://www.edamam.com/food-img/a03/a035e132202036e6c5678a42ab82fabb.png",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_twist",
+                        "label": "Twist",
+                        "quantity": 4.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                        "label": "Fluid ounce",
+                        "quantity": 14.792499542236328
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                        "label": "Fluid ounce",
+                        "quantity": 14.793000221252441
+                    }
+                ],
+                "servingsPerContainer": 4.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 437.46642251559376
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_twist",
+                    "label": "Twist",
+                    "weight": 109.36660562889844
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 1749.865690062375
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                    "label": "Fluid ounce",
+                    "weight": 29.572528626553073
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_bc2dmkzasz0lq4b2njnh5bn8rwt7",
+                "label": "Chi-Chi's Original Margarita",
+                "knownAs": "Chi-Chi's Original Margarita",
+                "nutrients": {
+                    "ENERC_KCAL": 38.57142857142857,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 9.857142857142856,
+                    "FIBTG": 0.0
+                },
+                "brand": "Glenmore Distilleries",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Tequila; Triple Sec And Natural Flavors; Fd&c Yellow #5",
+                "image": "https://www.edamam.com/food-img/b62/b62a7e966a31082b24ad5b262c692470.png",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_liter",
+                        "label": "Liter",
+                        "quantity": 0.23333333333333334
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+                        "label": "Milliliter",
+                        "quantity": 235.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                        "label": "Fluid ounce",
+                        "quantity": 8.0
+                    }
+                ],
+                "servingsPerContainer": 7.5
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 233.33333333333334
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 1750.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+                    "label": "Milliliter",
+                    "weight": 0.9929078014184397
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                    "label": "Fluid ounce",
+                    "weight": 29.166666666666668
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_liter",
+                    "label": "Liter",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_bt269lpaee5yuea0azmn6ashtd21",
+                "label": "Chi-Chi's, Diced Green Chilies",
+                "knownAs": "CHI-CHI'S, DICED GREEN CHILIES",
+                "nutrients": {
+                    "ENERC_KCAL": 17.0,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 3.3299999237060547,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "GREEN CHILE PEPPERS; WATER; SALT; CITRIC ACID; CALCIUM CHLORIDE.",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 2.0
+                    }
+                ],
+                "servingsPerContainer": 4.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 120.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 15.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_atx3w4qa7p7lxragvzhhqbm1zbth",
+                "label": "Chi-Chi's, Fiesta Green Jalapenos",
+                "knownAs": "CHI-CHI'S, FIESTA GREEN JALAPENOS",
+                "nutrients": {
+                    "ENERC_KCAL": 33.0,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 6.670000076293945,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "JALAPENO PEPPERS; WATER; VINEGAR; SALT; CALCIUM CHLORIDE.",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+                        "label": "Cup",
+                        "quantity": 0.25
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    }
+                ],
+                "servingsPerContainer": 4.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_slice",
+                    "label": "Slice",
+                    "weight": 1.4285714285714286
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 120.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+                    "label": "Cup",
+                    "weight": 120.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_aleuy9qavklegybzvvxcnbt1kwtp",
+                "label": "Chi-Chi's, Medium Taco Sauce",
+                "knownAs": "CHI-CHI'S, MEDIUM TACO SAUCE",
+                "nutrients": {
+                    "ENERC_KCAL": 33.0,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 10.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "WATER; TOMATO PASTE; TOMATOES; ONIONS; GREEN CHILES (CONTAINS CITRIC ACID); WHITE VINEGAR; SUGAR; CONTAINS 2% OR LESS OF SALT; JALAPENO PEPPERS (CONTAINS VINEGAR); ONION POWDER; CHILI POWDER (CHILI PEPPERS; SPICES; GARLIC POWDER); GARLIC POWDER; SPICES; CITRIC ACID; XANTHAN GUM; NATURAL FLAVORING.",
+                "image": "https://www.edamam.com/food-img/e27/e2792cc8fb9ffa74cc758adb732f7371.png",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 2.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 15.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_akhi9hgatlhs21baairfza53xpe5",
+                "label": "Chi-Chi's Fiesta Red Jalapenos",
+                "knownAs": "Chi-chi's Fiesta Red Jalapenos",
+                "nutrients": {
+                    "ENERC_KCAL": 18.18181818181818,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 3.6363636363636362,
+                    "FIBTG": 0.0
+                },
+                "brand": "Hormel Foods Corporation",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Jalapeno Peppers; Water; Vinegar; Salt; Calcium Chloride",
+                "image": "https://www.edamam.com/food-img/796/7963aafe50c8170dc3e22cb55ddcadfa.jpg",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+                        "label": "Cup",
+                        "quantity": 0.25
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 55.0
+                    }
+                ],
+                "servingsPerContainer": 4.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 55.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 220.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+                    "label": "Cup",
+                    "weight": 220.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_aqo9z5abprtqejaem9p9obeaz8l5",
+                "label": "Chi-Chi's  Refried Beans  Fiesta",
+                "knownAs": "Chi-chi's  Refried Beans  Fiesta",
+                "nutrients": {
+                    "ENERC_KCAL": 108.33333333333334,
+                    "PROCNT": 4.166666666666667,
+                    "FAT": 5.0,
+                    "CHOCDF": 13.333333333333334,
+                    "FIBTG": 3.3333333333333335
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Cooked Pinto Beans; Water; Lard And Partially Hydrogenated Lard; Salt; Vinegar; Spices; Onion Powder And Garlic Powder",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 120.0
+                    }
+                ],
+                "servingsPerContainer": 3.5
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 120.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 420.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_akhzjbabsnz4jdaw9dhkaarzvnbt",
+                "label": "Chi-Chi's, Snackers, Nacho Cheese",
+                "knownAs": "CHI-CHI'S, SNACKERS, NACHO CHEESE",
+                "nutrients": {
+                    "ENERC_KCAL": 294.0,
+                    "PROCNT": 5.880000114440918,
+                    "FAT": 23.530000686645508,
+                    "CHOCDF": 11.760000228881836,
+                    "FIBTG": 0.0
+                },
+                "brand": "Hormel Foods Corporation",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "MILK; WHEY PROTEIN CONCENTRATE; WHEY; SOYBEAN OIL; WATER; RED BELL PEPPERS; SODIUM PHOSPHATE; TOMATOES; CORN SYRUP; GREEN CHILIES; CONTAINS 2% OR LESS OF NATURAL FLAVOR; JALAPENO PEPPERS; TOMATO PASTE; SODIUM ALGINATE; SALT; LACTIC ACID; ONION POWDER; SPICES; CHILI PEPPERS; GARLIC; CHEESE CULTURES; ENZYMES; DATEM; ANNATTO (COLOR); OLEORESIN OF PAPRIKA.",
+                "image": "https://www.edamam.com/food-img/1ce/1ce3eb2687d91bcd862a91d70dc58c40.jpg",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 34.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 2.0
+                    }
+                ],
+                "servingsPerContainer": 10.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 34.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 340.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 17.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_aq2ye60azo4uwabbnhimkan114bf",
+                "label": "Chi-Chi's, Taco Sauce, Mild",
+                "knownAs": "CHI-CHI'S, TACO SAUCE, MILD",
+                "nutrients": {
+                    "ENERC_KCAL": 33.0,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 10.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "WATER; TOMATO PASTE; TOMATOES; ONIONS; GREEN CHILES (CONTAINS CITRIC ACID); WHITE VINEGAR; SUGAR; CONTAINS 2% OR LESS OF SALT; JALAPENO PEPPERS (CONTAINS VINEGAR); ONION POWDER; CHILI POWDER (CHILI PEPPERS; SPICES; GARLIC POWDER); GARLIC POWDER; SPICES; CITRIC ACID; XANTHAN GUM.",
+                "image": "https://www.edamam.com/food-img/8c1/8c13d84e6b78d3855ad17f18dff06481.jpg",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 2.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 15.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_a85vebsalvty4nbddgifrayf8fei",
+                "label": "Chi-Chi's - Tortilla Chips - no Salt",
+                "knownAs": "Chi-chi's - Tortilla Chips - No Salt",
+                "nutrients": {
+                    "ENERC_KCAL": 500.0,
+                    "PROCNT": 6.666666666666667,
+                    "FAT": 26.666666666666668,
+                    "CHOCDF": 60.0,
+                    "FIBTG": 6.666666666666667
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Masa Flour; Vegetable Oil; Toasted Corn Germ",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    }
+                ],
+                "servingsPerContainer": 10.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 300.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_ahbtpfrbgn6me2alrsdbga1pnul7",
+                "label": "Kim - Chi",
+                "knownAs": "KIM - CHI",
+                "nutrients": {
+                    "ENERC_KCAL": 35.0,
+                    "PROCNT": 1.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 8.0,
+                    "FIBTG": 3.0
+                },
+                "brand": "Rejuvenative Foods",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "CABBAGE*; CARROTS*; ONIONS*; GINGER*; HIGH-MINERAL HEALTH SALT; GROUND DRIED RED PEPPER*.",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 100.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 7.0
+                    }
+                ],
+                "servingsPerContainer": 4.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 100.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 400.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 14.285714285714286
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_a6pwi7ya6znh2ob8h7dlzbovdt0d",
+                "label": "Chi-Chi's, Thick & Chunky Salsa, Flavor",
+                "knownAs": "CHI-CHI'S, THICK & CHUNKY SALSA, FLAVOR",
+                "nutrients": {
+                    "ENERC_KCAL": 33.0,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 6.670000076293945
+                },
+                "brand": "Chunky",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "TOMATOES; WATER; CONCENTRATED CRUSHED TOMATOES; ONIONS; JALAPENO PEPPERS (CONTAINS VINEGAR); SALT; VINEGAR; DEHYDRATED GARLIC; ONION POWDER; CITRIC ACID; GARLIC POWDER.",
+                "image": "https://www.edamam.com/food-img/c73/c732a9b35b598b776ca6081cbe7bf1a2.jpg",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 30.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                        "label": "Tablespoon",
+                        "quantity": 2.0
+                    }
+                ],
+                "servingsPerContainer": 15.0
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 30.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 450.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon",
+                    "label": "Tablespoon",
+                    "weight": 15.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_bbk5hdjaycbk2ibqbf2oqaqcerai",
+                "label": "Chi-Chi's Margarita Mango 59.75 Oz",
+                "knownAs": "Chi-chi's Margarita Mango 59.75 Oz",
+                "nutrients": {
+                    "ENERC_KCAL": 92.98856243006824,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 22.824465323744025,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Water; High Fructose Corn Syrup; Citric Acid; Sodium Citrate; Sodium Hexametaphosphate; Cellulose Gum; Potassium Sorbate; Preservative; Acacia Gum; Natural And Artificial Flavors; Polysorbate 60; Ester Gum; Sodium Metabisulfite; Preservative; Yellow 5; Calcium Lactate; Calcium Gluconate; Yellow 6",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                        "label": "Fluid ounce",
+                        "quantity": 4.0
+                    },
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                        "label": "Fluid ounce",
+                        "quantity": 3.999866186811893
+                    }
+                ],
+                "servingsPerContainer": 14.937999725341797
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 118.29411825
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+                    "label": "Package",
+                    "weight": 1767.07750592805
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce",
+                    "label": "Fluid ounce",
+                    "weight": 29.5735295625
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_ajpsdm6bs4gzaya9ttnpsatzv3sf",
+                "label": "Chi-Chi's Sweet Corn Cake Mix",
+                "knownAs": "Chi-Chi's Sweet Corn Cake Mix",
+                "nutrients": {
+                    "ENERC_KCAL": 71.50127330065047,
+                    "PROCNT": 0.47667515533766974,
+                    "FAT": 0.23833757766883487,
+                    "CHOCDF": 17.16030559215611,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chi Chi's",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Corn Meal; Sugar; Salt; Baking Powder; Sodium Acid Pyrophosphate; Sodium Bicarbonate; Cornstarch; Monocalcium Phosphate",
+                "image": "https://www.edamam.com/food-img/a9d/a9de79f074a8e5bc8d60d7a59992035c",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                        "label": "Ounce",
+                        "quantity": 7.400000095367432
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 209.7864738286212
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_b7tyew2bfobutcbldikoubwsyf8s",
+                "label": "Chi-Chi's Thick & Chunky Medium Salsa",
+                "knownAs": "Chi-Chi's Thick & Chunky Medium Salsa",
+                "nutrients": {
+                    "ENERC_KCAL": 2.2046226218487757,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 0.44092452436975516,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chunky",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Tomato in Tomato Juice; Contains Citric Acid; Calcium Chloride; Water; Concentrated Crushed Tomato; Onions; Jalapeño Peppers; Contains Vinegar; Contains 2% or Less of; Salt; White Vinegar; Dehydrated Garlic; Onion Powder; Citric Acid; Natural Flavoring",
+                "image": "https://www.edamam.com/food-img/284/2844e641ea0c0cf6b3db895eebecb145",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                        "label": "Ounce",
+                        "quantity": 16.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_ar9u0byazplylba4lck8fb0jzdil",
+                "label": "Chi-Chi's Medium Thick & Chunky Salsa",
+                "knownAs": "Chi-Chi's Medium Thick & Chunky Salsa",
+                "nutrients": {
+                    "ENERC_KCAL": 0.7348742072829252,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 0.14697484145658504
+                },
+                "brand": "Chunky",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Tomatoes in Tomato Juice; Contains Citric Acid; To Acidify; Calcium Chloride; Firming; Water; Onions; Jalapeno Peppers; Concentrated Crushed Tomatoes; Contains Less Than 2% of White Vinegar; Salt; Modified Cornstarch; Dehydrated Garlic; Sodium Benzoate; Preservative; Onion Powder; Xanthan Gum; Citric Acid; To Acidify; Natural Flavoring",
+                "image": "https://www.edamam.com/food-img/c3b/c3b06301245e327345b23aaab9f3d4ef",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                        "label": "Ounce",
+                        "quantity": 48.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 1360.77711
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_az3albqb10ul5zbx6xv0yajmae4f",
+                "label": "Chi-Chi's Mild Thick & Chunky Salsa",
+                "knownAs": "Chi-Chi's Mild Thick & Chunky Salsa",
+                "nutrients": {
+                    "ENERC_KCAL": 0.7348742072829252,
+                    "PROCNT": 0.0,
+                    "FAT": 0.0,
+                    "CHOCDF": 0.14697484145658504,
+                    "FIBTG": 0.0
+                },
+                "brand": "Chunky",
+                "category": "Packaged foods",
+                "categoryLabel": "food",
+                "foodContentsLabel": "Tomatoes in Tomato Juice; Contains Citric Acid; To Acidify; Calcium Chloride; Firming; Water; Onions; Jalapeno Peppers; Concentrated Crushed Tomatoes; Contain 2% or Less of; White Vinegar; Sat; Modified Cornstarch; Dehydrated Garlic; Sodium Benzoate; Preservative; Onion Powder; Xanthan Gum; Citric Acid; To Acidify",
+                "image": "https://www.edamam.com/food-img/58f/58fd1c6de181ad1dc987070354a19977",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                        "label": "Ounce",
+                        "quantity": 48.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 1360.77711
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        },
+        {
+            "food": {
+                "foodId": "food_bzjouecbxf20ejbcpmctvbudy64q",
+                "label": "Chi-Cobbo-o",
+                "knownAs": "Chi-Cobbo-O",
+                "nutrients": {
+                    "ENERC_KCAL": 128.84615384615384,
+                    "PROCNT": 9.038461538461538,
+                    "FAT": 8.461538461538462,
+                    "CHOCDF": 5.0,
+                    "FIBTG": 2.307692307692308
+                },
+                "brand": "Be Leaf",
+                "category": "Fast foods",
+                "categoryLabel": "meal",
+                "servingSizes": [
+                    {
+                        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                        "label": "Gram",
+                        "quantity": 520.0
+                    }
+                ]
+            },
+            "measures": [
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+                    "label": "Serving",
+                    "weight": 520.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+                    "label": "Gram",
+                    "weight": 1.0
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+                    "label": "Ounce",
+                    "weight": 28.349523125
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+                    "label": "Pound",
+                    "weight": 453.59237
+                },
+                {
+                    "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+                    "label": "Kilogram",
+                    "weight": 1000.0
+                }
+            ]
+        }
+    ],
+    "_links": {
+        "next": {
+            "title": "Next page",
+            "href": "https://api.edamam.com/api/food-database/v2/parser?session=40&app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=chi&nutrition-type=cooking"
+        }
+    }
+}
