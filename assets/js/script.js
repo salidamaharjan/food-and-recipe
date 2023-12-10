@@ -1,4 +1,5 @@
 var form = document.querySelector("#ingredientForm");
+var regexNotLettersSpaces = /[^a-zA-Z\s]/g;
 
 form.addEventListener("submit", function (event) {
   // Prevent the default form submission
@@ -15,7 +16,9 @@ window.addEventListener("load", function () {
 
 function fetchNutrientApi() {
   var inputSection = document.querySelector("#ingredientInput");
-  var value = inputSection.value;
+  var value = inputSection.value.trim();
+  //strip out anything other than letters and spaces
+  value = value.replace(regexNotLettersSpaces, "");
 
   console.log("ingredient value", value);
 
@@ -58,19 +61,22 @@ function saveIngredientToLocalStorage(ingredient) {
   var savedIngredients =
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
-  // Add the new ingredient to the top of the Array
-  savedIngredients.unshift(ingredient);
-  //Maximum number of history items is 15
-  if (savedIngredients.length > 15) {
-    savedIngredients = savedIngredients.slice(0, 15);
+  // making sure the saved ingredient do not duplicate in list
+  if(!savedIngredients.includes(ingredient) && ingredient.length >0) {
+    // Add the new ingredient to the top of the Array
+    savedIngredients.unshift(ingredient);
+    //Maximum number of history items is 15
+    if (savedIngredients.length > 15) {
+        savedIngredients = savedIngredients.slice(0, 15);
+    }
+    // Save the updated array back to local storage
+    localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
+    
+    console.log("Ingredient saved to local storage:", ingredient);
+
+    // Update the displayed saved ingredients
+    updateSavedIngredients();
   }
-  // Save the updated array back to local storage
-  localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
-
-  console.log("Ingredient saved to local storage:", ingredient);
-
-  // Update the displayed saved ingredients
-  updateSavedIngredients();
 }
 
 // Update saved ingredients in the "Saved Ingredients" section
@@ -96,15 +102,23 @@ function updateSavedIngredients() {
     button.addEventListener("click", function () {
       // Handle the click event
       console.log("Button clicked for ingredient:", ingredient);
+      
+      console.log(searchBtn);
     });
     savedIngredientsContainer.appendChild(button);
   });
 
+  var inputSection = document.querySelector('#input');
   var recipesBtn = document.querySelector(".recipes-btn");
 
   recipesBtn.addEventListener("click", async function () {
     var recipeResult = await fetchRecipeApi();
     console.log(recipeResult);
+
+    //clear out ingredient once submitted
+    $("#ingredientInput").val("");
+    //console.log(ingredientInput.val);
+
     displayRecipeBox(recipeResult);
   });
 }
@@ -156,9 +170,12 @@ function constructRecipeBoxInfo(recipe) {
                   </div>`;
   return divEl;
 }
+
 async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
+  //strip out anything other than letters and spaces
+  value = value.replace(regexNotLettersSpaces, "");
   var response = await fetch(
     `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
       value

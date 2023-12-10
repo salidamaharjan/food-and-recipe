@@ -36,6 +36,11 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 - [W3 Schools](https://www.w3schools.com/)
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 - [Static Badges](https://shields.io/badges)
+- [Stack Overflow](https://stackoverflow.com/questions/19508183/how-to-force-input-to-only-allow-alpha-letters)
+
+
+
+
 
 ## **License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
