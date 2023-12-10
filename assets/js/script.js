@@ -109,14 +109,15 @@ function updateSavedIngredients() {
   });
 }
 
-function recipeBox(ingredient) {
+function recipeBox(recipes) {
   for (var i = 0; i < 1; i++) {
     var displayedRecipes = document.querySelector(".displayed-recipes");
-    var recipeEl = constructRecipeBoxInfo();
+    var recipeEl = constructRecipeBoxInfo(recipes.hits[i].recipe);
     displayedRecipes.append(recipeEl);
   }
 }
 function constructRecipeBoxInfo(recipe) {
+  console.log(recipe);
   var divEl = document.createElement("div");
   divEl.setAttribute("class", "column is-4");
   divEl.innerHTML = `
@@ -126,24 +127,24 @@ function constructRecipeBoxInfo(recipe) {
                     <div
                       class="recipe-name has-text-white has-text-weight-bold is-size-6"
                     >
-                      Recipe Name
+                      ${recipe.label}
                     </div>
-                    <img class="recipe-image" src="" alt="" />
+                    <img class="recipe-image" src="${recipe.images.THUMBNAIL.url}" alt="recipe image" />
                     <ul class="recipe-nutrients">
                       <li class="recipe-calorie has-text-white is-size-7">
-                        Calorie:<span></span>
+                        Calorie: <span>${Math.round(recipe.totalNutrients.ENERC_KCAL.quantity)} ${recipe.totalNutrients.ENERC_KCAL.unit}</span> 
                       </li>
                       <li class="recipe-protein has-text-white is-size-7">
-                        Protein:<span></span>
+                        Protein: <span>${Math.round(recipe.totalNutrients.PROCNT.quantity)} ${recipe.totalNutrients.PROCNT.unit}</span>
                       </li>
                       <li class="recipe-fat has-text-white is-size-7">
-                        Fat:<span></span>
+                        Fat: <span>${Math.round(recipe.totalNutrients.FAT.quantity)} ${recipe.totalNutrients.FAT.unit}</span>
                       </li>
                       <li class="recipe-carbs has-text-white is-size-7">
-                        Carbohydrates:<span></span>
+                        Carbohydrates: <span>${Math.round(recipe.totalNutrients.CHOCDF.quantity)} ${recipe.totalNutrients.CHOCDF.unit}</span>
                       </li>
                       <li class="recipe-fiber has-text-white is-size-7">
-                        Fiber:<span></span>
+                        Fiber: <span>${Math.round(recipe.totalNutrients.FIBTG.quantity)} ${recipe.totalNutrients.FIBTG.unit}</span>
                       </li>
                     </ul>
                     <button class="button btn-recipe-view is-small mt-3">
