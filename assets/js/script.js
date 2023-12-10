@@ -156,12 +156,12 @@ function constructRecipeBoxInfo(recipe) {
 async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
-  // var response = await fetch(
-  //   `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
-  //     value
-  //   )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
-  // );
-  var response = await fetch(`./assets/js/recipe.json`);
+  var response = await fetch(
+    `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
+      value
+    )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
+  );
+  // var response = await fetch(`./assets/js/recipe.json`);
   var result = await response.json();
   return result;
 }
