@@ -42,7 +42,18 @@ function fetchNutrientApi() {
         console.log("Food label:", firstHint.food.label);
         console.log("Category:", firstHint.food.category);
         console.log("Image:", firstHint.food.image);
-
+        $("#foodName").text(firstHint.food.label);
+        $("#foodCategory").text(firstHint.food.category);
+        // Clear any previous image from the container
+        $('#foodImage').html("");
+        // Create an image tag
+        var foodImage = $('<img />',
+        { 
+          // Set the image src to the image URL from the API
+          src: firstHint.food.image
+        });
+        // Append the image to <p id="foodImage"></p> 
+        foodImage.appendTo($('#foodImage'));
         // Log nutritional information
         if (firstHint.food.nutrients) {
           var nutrients = firstHint.food.nutrients;
@@ -51,6 +62,11 @@ function fetchNutrientApi() {
           console.log("Fat:", nutrients.FAT);
           console.log("Carbohydrates:", nutrients.CHOCDF);
           console.log("Fiber:", nutrients.FIBTG);
+          $("#calories").text(nutrients.ENERC_KCAL + " kcal");
+          $("#protein").text(nutrients.PROCNT + " g");
+          $("#fat").text(nutrients.FAT + " g");
+          $("#carbohydrates").text(nutrients.CHOCDF + " g");
+          $("#fiber").text(nutrients.FIBTG + " g");
         }
       }
     });
