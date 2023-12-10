@@ -1,4 +1,5 @@
 var form = document.querySelector("#ingredientForm");
+var regexNotLettersSpaces = /[^a-zA-Z\s]/g;
 
 form.addEventListener("submit", function (event) {
   // Prevent the default form submission
@@ -16,6 +17,8 @@ window.addEventListener('load', function () {
 function fetchNutrientApi() {
   var inputSection = document.querySelector("#ingredientInput");
   var value = inputSection.value.trim();
+  //strip out anything other than letters and spaces
+  value = value.replace(regexNotLettersSpaces, "");
 
   console.log("ingredient value", value);
 
@@ -118,6 +121,8 @@ function updateSavedIngredients() {
  async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
+  //strip out anything other than letters and spaces
+  value = value.replace(regexNotLettersSpaces, "");
   var response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(value)}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`);
   var result = await response.json();
   return result;
