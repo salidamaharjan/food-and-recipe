@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
 
 function fetchNutrientApi() {
   var inputSection = document.querySelector("#ingredientInput");
-  var value = inputSection.value;
+  var value = inputSection.value.trim();
 
   console.log("ingredient value", value);
 
@@ -58,7 +58,7 @@ function saveIngredientToLocalStorage(ingredient) {
   var savedIngredients = JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
   // making sure the saved ingredient do not duplicate in list
-  if(!savedIngredients.includes(ingredient)) {
+  if(!savedIngredients.includes(ingredient) && ingredient.length >0) {
     // Add the new ingredient to the top of the Array
     savedIngredients.unshift(ingredient);
     //Maximum number of history items is 15
