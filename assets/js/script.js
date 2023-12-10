@@ -105,17 +105,20 @@ function updateSavedIngredients() {
   recipesBtn.addEventListener("click", async function () {
     var recipeResult = await fetchRecipeApi();
     console.log(recipeResult);
-    recipeBox(recipeResult);
+    displayRecipeBox(recipeResult);
   });
 }
 
-function recipeBox(recipes) {
+//displays the available recipe in the UI
+function displayRecipeBox(recipes) {
+  //the length hits may not be uniform so using hits.length
   for (var i = 0; i < recipes.hits.length; i++) {
     var displayedRecipes = document.querySelector(".displayed-recipes");
     var recipeEl = constructRecipeBoxInfo(recipes.hits[i].recipe);
     displayedRecipes.append(recipeEl);
   }
 }
+//creating new element according to the recipe and return created element
 function constructRecipeBoxInfo(recipe) {
   console.log(recipe);
   var divEl = document.createElement("div");
