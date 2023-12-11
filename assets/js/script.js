@@ -111,7 +111,7 @@ function updateSavedIngredients() {
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
     var button = document.createElement("button");
-    button.classList.add("button", "is-medium", "is-info", "mr-2");
+    button.classList.add("button", "is-medium", "is-primary", "mr-2", "is-fullwidth", "has-text-weight-bold", "is-size-4");
     button.textContent = ingredient;
 
     // Attach a click event listener to each button
@@ -122,6 +122,7 @@ function updateSavedIngredients() {
       console.log(searchBtn);
     });
     savedIngredientsContainer.appendChild(button);
+    savedIngredientsContainer.classList.add("is-flex-direction-column");
   });
 
   var inputSection = document.querySelector('#input');
