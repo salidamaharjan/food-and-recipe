@@ -204,32 +204,36 @@ function constructRecipeBoxInfo(recipe) {
                       View Recipe
                     </button>
                   </div>`;
-//recipe button is only found in the div element because it is not attached to HTML yet
+  //recipe button is only found in the div element because it is not attached to HTML yet
   var recipeBtn = divEl.querySelector(".btn-recipe-view");
-  recipeBtn.addEventListener("click", function() {
+  recipeBtn.addEventListener("click", function () {
     var recipeModal = document.querySelector(".recipe-view-modal");
     //adding class is-active to show the modal in UI
     recipeModal.classList.add("is-active");
-    var recipeLabel = document.querySelector(".recipe-label")
+    var recipeLabel = document.querySelector(".recipe-label");
     recipeLabel.textContent = recipe.label;
     var recipeImg = document.querySelector(".recipe-img");
     recipeImg.setAttribute("src", "recipe.images.THUMBNAIL.url");
-   
+
     //looping through the items of ingredientLines and putting the value to list
-    for(var i = 0; i < recipe.ingredientLines.length; i++){
-      var ingredientLinesListOl  = document.querySelector(".ingredientLines-list");
+    for (var i = 0; i < recipe.ingredientLines.length; i++) {
+      var ingredientLinesListOl = document.querySelector(
+        ".ingredientLines-list"
+      );
       var ingredientLinesLi = document.createElement("li");
       ingredientLinesListOl.append(ingredientLinesLi);
       ingredientLinesLi.textContent = recipe.ingredientLines[i];
     }
     //looping through the items of instructionLines and putting the value to list
-    for(var i = 0; i < recipe.instructionLines.length; i++){
-      var instructionLinesListOl  = document.querySelector(".instructionLines-list");
-       var instructionLinesLi = document.createElement("li");
+    for (var i = 0; i < recipe.instructionLines.length; i++) {
+      var instructionLinesListOl = document.querySelector(
+        ".instructionLines-list"
+      );
+      var instructionLinesLi = document.createElement("li");
       instructionLinesListOl.append(instructionLinesLi);
       instructionLinesLi.textContent = recipe.instructionLines[i];
     }
-  })
+  });
   return divEl;
 }
 
