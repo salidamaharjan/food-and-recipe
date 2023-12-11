@@ -1,5 +1,17 @@
 var form = document.querySelector("#ingredientForm");
 var regexNotLettersSpaces = /[^a-zA-Z\s]/g;
+//closing the modal when cross or the outside of the box is clicked
+var recipeViewModal = document.querySelector(".recipe-view-modal");
+recipeViewModal.addEventListener("click", function (event) {
+  console.log(event.target);
+  if (
+    event.target.matches(".btn-close-recipeModal") ||
+    event.target.matches(".recipe-modal-container")
+  ) {
+    var modal = document.querySelector(".modal");
+    modal.classList.remove("is-active");
+  }
+});
 
 form.addEventListener("submit", function (event) {
   // Prevent the default form submission
