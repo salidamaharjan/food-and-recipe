@@ -207,36 +207,50 @@ function constructRecipeBoxInfo(recipe) {
   //recipe button is only found in the div element because it is not attached to HTML yet
   var recipeBtn = divEl.querySelector(".btn-recipe-view");
   recipeBtn.addEventListener("click", function () {
-    var recipeModal = document.querySelector(".recipe-view-modal");
-    //adding class is-active to show the modal in UI
-    recipeModal.classList.add("is-active");
-    var recipeLabel = document.querySelector(".recipe-label");
-    recipeLabel.textContent = recipe.label;
-    var recipeImg = document.querySelector(".recipe-img");
-    recipeImg.setAttribute("src", "recipe.images.THUMBNAIL.url");
-
-    //looping through the items of ingredientLines and putting the value to list
-    for (var i = 0; i < recipe.ingredientLines.length; i++) {
-      var ingredientLinesListOl = document.querySelector(
-        ".ingredientLines-list"
-      );
-      var ingredientLinesLi = document.createElement("li");
-      ingredientLinesListOl.append(ingredientLinesLi);
-      ingredientLinesLi.textContent = recipe.ingredientLines[i];
-    }
-    //looping through the items of instructionLines and putting the value to list
-    for (var i = 0; i < recipe.instructionLines.length; i++) {
-      var instructionLinesListOl = document.querySelector(
-        ".instructionLines-list"
-      );
-      var instructionLinesLi = document.createElement("li");
-      instructionLinesListOl.append(instructionLinesLi);
-      instructionLinesLi.textContent = recipe.instructionLines[i];
-    }
+    createRecipeModal(recipe);
   });
   return divEl;
 }
+function createRecipeModal(recipe) {
+  var recipeModal = document.querySelector(".recipe-view-modal");
+  //adding class is-active to show the modal in UI
+  recipeModal.classList.add("is-active");
+  var recipeLabel = document.querySelector(".recipe-label");
+  recipeLabel.textContent = recipe.label;
+  var recipeImg = document.querySelector(".recipe-img");
+  recipeImg.setAttribute("src", "recipe.images.THUMBNAIL.url");
 
+  //looping through the items of ingredientLines and putting the value to list
+  for (var i = 0; i < recipe.ingredientLines.length; i++) {
+    var ingredientLinesListOl = document.querySelector(".ingredientLines-list");
+    var ingredientLinesLi = document.createElement("li");
+    ingredientLinesListOl.append(ingredientLinesLi);
+    ingredientLinesLi.textContent = recipe.ingredientLines[i];
+  }
+
+  if (recipe.instructionLines.length === 0) {
+    // <a class="button">Anchor</a>
+    var recipeInstructionLines = document.querySelector(
+      ".recipe-instructionLines"
+    );
+    var recipeInstructionLink = document.createElement("a");
+    recipeInstructionLines.append(recipeInstructionLink);
+    recipeInstructionLink.textContent = "Click to view instruction";
+    recipeInstructionLink.setAttribute("href", recipe.url);
+    recipeInstructionLink.setAttribute("target", "_blank");
+    recipeInstructionLink.classList.add("button", "mt-3", "is-link");
+  }
+
+  //looping through the items of instructionLines and putting the value to list
+  for (var i = 0; i < recipe.instructionLines.length; i++) {
+    var instructionLinesListOl = document.querySelector(
+      ".instructionLines-list"
+    );
+    var instructionLinesLi = document.createElement("li");
+    instructionLinesListOl.append(instructionLinesLi);
+    instructionLinesLi.textContent = recipe.instructionLines[i];
+  }
+}
 async function fetchRecipeApi() {
   var inputElement = document.querySelector("#ingredientInput");
   var value = inputElement.value;
