@@ -4,6 +4,8 @@ var regexNotLettersSpaces = /[^a-zA-Z\s]/g;
 var recipeViewModal = document.querySelector(".recipe-view-modal");
 recipeViewModal.addEventListener("click", function (event) {
   console.log(event.target);
+  //we want to close the modal when clicked outside of the content box and
+  //cross button
   if (
     event.target.matches(".btn-close-recipeModal") ||
     event.target.matches(".recipe-modal-container")
