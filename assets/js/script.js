@@ -232,7 +232,7 @@ function createRecipeModal(recipe) {
   var recipeLabel = document.querySelector(".recipe-label");
   recipeLabel.textContent = recipe.label;
   var recipeImg = document.querySelector(".recipe-img");
-  recipeImg.setAttribute("src", "recipe.images.THUMBNAIL.url");
+  recipeImg.setAttribute("src", recipe.images.THUMBNAIL.url);
 
   //looping through the items of ingredientLines and putting the value to list
   for (var i = 0; i < recipe.ingredientLines.length; i++) {
@@ -270,12 +270,12 @@ async function fetchRecipeApi() {
   var value = inputElement.value;
   //strip out anything other than letters and spaces
   value = value.replace(regexNotLettersSpaces, "");
-  // var response = await fetch(
-  //   `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
-  //     value
-  //   )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
-  // );
-  var response = await fetch(`./assets/js/recipe.json`);
+  var response = await fetch(
+    `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
+      value
+    )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
+  );
+  // var response = await fetch(`./assets/js/recipe.json`);
   var result = await response.json();
   return result;
 }
