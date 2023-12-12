@@ -15,6 +15,19 @@ recipeViewModal.addEventListener("click", function (event) {
   }
 });
 
+var errorModal = document.querySelector(".error-modal");
+errorModal.addEventListener("click", function(event) {
+  console.log(event.target);
+  if (
+    event.target.matches(".btn-close-errorModal") ||
+    event.target.matches(".error-modal-container")
+  )
+  {
+    var modal = document.querySelector(".error-modal");
+    modal.classList.remove("is-active");    
+  }
+});
+
 form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
@@ -95,7 +108,9 @@ function fetchNutrientApi() {
     });
   }
   else {
-    alert("invalid search");
+    var errorModal = document.querySelector(".error-modal");
+    //adding class is-active to show the modal in UI
+    errorModal.classList.add("is-active");
   }
 }
 // Save ingredient to local storage function
