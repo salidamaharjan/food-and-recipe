@@ -15,12 +15,19 @@ recipeViewModal.addEventListener("click", function (event) {
   }
 });
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
 
   // Call your API function
   fetchNutrientApi();
+  //fetching recipe API and display when entered an ingredient
+  var recipeResult = await fetchRecipeApi();
+  // console.log(recipeResult);
+  //clear out ingredient once submitted
+  $("#ingredientInput").val("");
+  //console.log(ingredientInput.val);
+  displayRecipeBox(recipeResult);
 });
 
 // Call updateSavedIngredients when the page loads
@@ -81,8 +88,11 @@ function fetchNutrientApi() {
           $("#carbohydrates").text(nutrients.CHOCDF + " g");
           $("#fiber").text(nutrients.FIBTG + " g");
         }
+          //Clear the input field after fetched details
+          inputSection.value = "";
       }
     });
+
 }
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
@@ -138,27 +148,60 @@ function updateSavedIngredients() {
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
       // Handle the click event
-      console.log("Button clicked for ingredient:", ingredient);
-
-      console.log(searchBtn);
+      handleSavedIngredientClick(ingredient);
     });
     savedIngredientsContainer.appendChild(button);
     savedIngredientsContainer.classList.add("is-flex-direction-column");
   });
 
-  var inputSection = document.querySelector("#input");
-  var recipesBtn = document.querySelector(".recipes-btn");
+}
 
-  recipesBtn.addEventListener("click", async function () {
-    var recipeResult = await fetchRecipeApi();
-    console.log(recipeResult);
+function handleSavedIngredientClick(ingredient) {
+  // Fetch details for the clicked ingredient
+  fetchNutrientDetails(ingredient);
+}
 
-    //clear out ingredient once submitted
-    $("#ingredientInput").val("");
-    //console.log(ingredientInput.val);
+function fetchNutrientDetails(ingredient) {
+  var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
+    ingredient
+  )}&nutrition-type=cooking`;
 
-    displayRecipeBox(recipeResult);
-  });
+  fetch(nutrientURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(`API Response for ${ingredient}:`, data);
+
+      // Access the first item in the "hints" array
+      if (data.hints && data.hints.length > 0) {
+        var firstHint = data.hints[0];
+
+        // Update the displayed information in the ingredientContainer
+        $("#foodName").text(firstHint.food.label);
+        $("#foodCategory").text(firstHint.food.category);
+
+        // Clear any previous image from the container
+        $("#foodImage").html("");
+        // Create an image tag
+        var foodImage = $("<img />", {
+          // Set the image src to the image URL from the API
+          src: firstHint.food.image,
+        });
+        // Append the image to <p id="foodImage"></p>
+        foodImage.appendTo($("#foodImage"));
+
+        // Log nutritional information
+        if (firstHint.food.nutrients) {
+          var nutrients = firstHint.food.nutrients;
+          $("#calories").text(nutrients.ENERC_KCAL + " kcal");
+          $("#protein").text(nutrients.PROCNT + " g");
+          $("#fat").text(nutrients.FAT + " g");
+          $("#carbohydrates").text(nutrients.CHOCDF + " g");
+          $("#fiber").text(nutrients.FIBTG + " g");
+        }
+      }
+    });
 }
 
 //displays the available recipe in the UI
