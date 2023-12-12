@@ -15,12 +15,19 @@ recipeViewModal.addEventListener("click", function (event) {
   }
 });
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
 
   // Call your API function
   fetchNutrientApi();
+  //fetching recipe API and display when entered an ingredient
+  var recipeResult = await fetchRecipeApi();
+  // console.log(recipeResult);
+  //clear out ingredient once submitted
+  $("#ingredientInput").val("");
+  //console.log(ingredientInput.val);
+  displayRecipeBox(recipeResult);
 });
 
 // Call updateSavedIngredients when the page loads
@@ -85,6 +92,7 @@ function fetchNutrientApi() {
           inputSection.value = "";
       }
     });
+
 }
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
@@ -146,19 +154,6 @@ function updateSavedIngredients() {
     savedIngredientsContainer.classList.add("is-flex-direction-column");
   });
 
-  var inputSection = document.querySelector("#input");
-  var recipesBtn = document.querySelector(".recipes-btn");
-
-  recipesBtn.addEventListener("click", async function () {
-    var recipeResult = await fetchRecipeApi();
-    console.log(recipeResult);
-
-    //clear out ingredient once submitted
-    $("#ingredientInput").val("");
-    //console.log(ingredientInput.val);
-
-    displayRecipeBox(recipeResult);
-  });
 }
 
 function handleSavedIngredientClick(ingredient) {
@@ -211,6 +206,8 @@ function fetchNutrientDetails(ingredient) {
 
 //displays the available recipe in the UI
 function displayRecipeBox(recipes) {
+  //clear recipes before displaying new
+  $("#recipe-cards").html("");
   //the length hits may not be uniform so using hits.length
   for (var i = 0; i < recipes.hits.length; i++) {
     var displayedRecipes = document.querySelector(".displayed-recipes");
