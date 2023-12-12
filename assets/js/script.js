@@ -164,9 +164,10 @@ async function handleSavedIngredientClick(ingredient) {
 }
 
 function fetchNutrientDetails(ingredient) {
-  var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
-    ingredient
-  )}&nutrition-type=cooking`;
+  // var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
+  //   ingredient
+  // )}&nutrition-type=cooking`;
+  var nutrientURL = './assets/js/ingredient.json';
 
   fetch(nutrientURL)
     .then(function (response) {
@@ -315,12 +316,12 @@ function createRecipeModal(recipe) {
 async function fetchRecipeApi(recipe) {
   //strip out anything other than letters and spaces
   value = recipe.replace(regexNotLettersSpaces, "");
-  var response = await fetch(
-    `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
-      value
-    )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
-  );
-  // var response = await fetch(`./assets/js/recipe.json`);
+  // var response = await fetch(
+  //   `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
+  //     value
+  //   )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
+  // );
+  var response = await fetch(`./assets/js/recipe.json`);
   var result = await response.json();
   return result;
 }
