@@ -56,20 +56,25 @@
 
           <div class="column is-two-thirds">
             <section id="ingredientDetails" class="mt-4">
-              <h5 class="title is-5">Ingredient Details</h5>
-              <div id="ingredientContainer" class="box">
-                <h3 id="ingredientLabel" class="title is-3">
-                  Ingredient Label
-                </h3>
-                <h4 id="foodName"></h4>
-                <h5 id="foodCategory"></h5>
-                <p id="foodImage"></p>
-                <h6 class="my-3 mt-3">Calories: <span id="calories"></span></span></h6>
-                <h6 class="my-3">Protein: <span id="protein"></span></h6>
-                <h6 class="my-3">Fat: <span id="fat"></span></h6>
-                <h6 class="my-3">Carbohydrates: <span id="carbohydrates"></span></h6>
-                <h6 class="my-3">Fiber: <span id="fiber"></span></h6>
-              </div>
+              <!-- <h5 class="title is-5">Ingredient Details</h5> -->
+              <div id="ingredientContainer" class="box columns">
+                <!-- Image column -->
+                <div class="column-is-food">
+                    <!-- <h3 id="ingredientLabel" class="title is-3">
+                      Ingredient Label
+                    </h3> -->
+                    <p id="foodImage"></p>
+                </div>
+               <div class="column has-text-left">
+                  <h4 id="foodName" class="title is-1 has-text-weight-bold"></h4>
+                  <!-- <h5 id="foodCategory"></h5> -->
+                  <h6 class="my-3 mt-3 has-text-weight-bold title is-4">Calories: <span id="calories" class="has-text-black"></span></h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">Protein: <span id="protein" class="has-text-black"></span></h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">Fat: <span id="fat" class="has-text-black"></span></h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">Carbohydrates: <span id="carbohydrates" class="has-text-black"></span></h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">Fiber: <span id="fiber" class="has-text-black"></span></h6>
+                </div>
+               </div>
               <!-- <button
                 class="recipes-btn button is-primary has-text-weight-bold mb-5"
               >
