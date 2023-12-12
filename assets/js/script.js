@@ -108,9 +108,9 @@ function saveIngredientToLocalStorage(ingredient) {
   if (!savedIngredients.includes(ingredient) && ingredient.length > 0) {
     // Add the new ingredient to the top of the Array
     savedIngredients.unshift(ingredient);
-    //Maximum number of history items is 15
-    if (savedIngredients.length > 15) {
-      savedIngredients = savedIngredients.slice(0, 15);
+    //Maximum number of history items is 20
+    if (savedIngredients.length > 20) {
+      savedIngredients = savedIngredients.slice(0, 10);
     }
     // Save the updated array back to local storage
     localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
@@ -143,11 +143,11 @@ function updateSavedIngredients() {
       "button",
       "is-medium",
       "is-primary",
-      "mr-2",
-      "is-fullwidth",
+      "mb-2",
+      "is-outlined",
       "has-text-weight-bold",
-      "is-size-4"
-    );
+      "is-size-4", 
+      "is-block" );
     button.textContent = ingredient;
 
     // Attach a click event listener to each button
@@ -156,7 +156,6 @@ function updateSavedIngredients() {
       handleSavedIngredientClick(ingredient);
     });
     savedIngredientsContainer.appendChild(button);
-    savedIngredientsContainer.classList.add("is-flex-direction-column");
   });
 }
 
