@@ -22,7 +22,7 @@ form.addEventListener("submit", async function (event) {
   // Call your API function
   fetchNutrientApi();
   //fetching recipe API and display when entered an ingredient
-  var recipeResult = await fetchRecipeApi();
+  var recipeResult = await fetchRecipeApi($("#ingredientInput").val());
   // console.log(recipeResult);
   //clear out ingredient once submitted
   $("#ingredientInput").val("");
@@ -94,11 +94,10 @@ function fetchNutrientApi() {
           $("#carbohydrates").text(nutrients.CHOCDF + " g");
           $("#fiber").text(nutrients.FIBTG + " g");
         }
-          //Clear the input field after fetched details
-          inputSection.value = "";
+        //Clear the input field after fetched details
+        inputSection.value = "";
       }
     });
-
 }
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
@@ -159,12 +158,15 @@ function updateSavedIngredients() {
     savedIngredientsContainer.appendChild(button);
     savedIngredientsContainer.classList.add("is-flex-direction-column");
   });
-
 }
 
-function handleSavedIngredientClick(ingredient) {
+async function handleSavedIngredientClick(ingredient) {
   // Fetch details for the clicked ingredient
   fetchNutrientDetails(ingredient);
+  //fetch recipe API when clicked on the ingredient
+  var recipeResult = await fetchRecipeApi(ingredient);
+  console.log(recipeResult);
+  displayRecipeBox(recipeResult);
 }
 
 function fetchNutrientDetails(ingredient) {
@@ -316,11 +318,9 @@ function createRecipeModal(recipe) {
     instructionLinesLi.textContent = recipe.instructionLines[i];
   }
 }
-async function fetchRecipeApi() {
-  var inputElement = document.querySelector("#ingredientInput");
-  var value = inputElement.value;
+async function fetchRecipeApi(recipe) {
   //strip out anything other than letters and spaces
-  value = value.replace(regexNotLettersSpaces, "");
+  value = recipe.replace(regexNotLettersSpaces, "");
   var response = await fetch(
     `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
       value
