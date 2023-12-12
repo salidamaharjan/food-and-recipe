@@ -164,6 +164,7 @@ function updateSavedIngredients() {
 //displays the available recipe in the UI
 function displayRecipeBox(recipes) {
   //the length hits may not be uniform so using hits.length
+  $("#recipe-cards").html("");
   for (var i = 0; i < recipes.hits.length; i++) {
     var displayedRecipes = document.querySelector(".displayed-recipes");
     var recipeEl = constructRecipeBoxInfo(recipes.hits[i].recipe);
