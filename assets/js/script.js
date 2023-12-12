@@ -15,6 +15,19 @@ recipeViewModal.addEventListener("click", function (event) {
   }
 });
 
+var errorModal = document.querySelector(".error-modal");
+errorModal.addEventListener("click", function(event) {
+  console.log(event.target);
+  if (
+    event.target.matches(".btn-close-errorModal") ||
+    event.target.matches(".error-modal-container")
+  )
+  {
+    var modal = document.querySelector(".error-modal");
+    modal.classList.remove("is-active");    
+  }
+});
+
 form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
@@ -42,10 +55,11 @@ function fetchNutrientApi() {
   value = value.replace(regexNotLettersSpaces, "");
 
   console.log("ingredient value", value);
-
-  saveIngredientToLocalStorage(value);
-
-  var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
+  // check length
+  if (value.length > 0) {
+    saveIngredientToLocalStorage(value);
+  
+    var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
     value
   )}&nutrition-type=cooking`;
   fetch(nutrientURL)
@@ -92,6 +106,12 @@ function fetchNutrientApi() {
         inputSection.value = "";
       }
     });
+  }
+  else {
+    var errorModal = document.querySelector(".error-modal");
+    //adding class is-active to show the modal in UI
+    errorModal.classList.add("is-active");
+  }
 }
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
