@@ -42,10 +42,11 @@ function fetchNutrientApi() {
   value = value.replace(regexNotLettersSpaces, "");
 
   console.log("ingredient value", value);
-
-  saveIngredientToLocalStorage(value);
-
-  var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
+  // check length
+  if (value.length > 0) {
+    saveIngredientToLocalStorage(value);
+  
+    var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
     value
   )}&nutrition-type=cooking`;
   fetch(nutrientURL)
@@ -92,6 +93,10 @@ function fetchNutrientApi() {
         inputSection.value = "";
       }
     });
+  }
+  else {
+    alert("invalid search");
+  }
 }
 // Save ingredient to local storage function
 function saveIngredientToLocalStorage(ingredient) {
