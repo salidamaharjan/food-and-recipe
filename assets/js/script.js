@@ -129,9 +129,10 @@ function updateSavedIngredients() {
   // Get saved ingredients from local storage
   var savedIngredients =
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
-
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
+    ingredient = ingredient.toUpperCase();
+    
     var button = document.createElement("button");
     button.classList.add(
       "button",
