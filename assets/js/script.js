@@ -42,7 +42,7 @@ function fetchNutrientApi() {
   value = value.replace(regexNotLettersSpaces, "");
 
   console.log("ingredient value", value);
-
+  // check length
   if (value.length > 0) {
     saveIngredientToLocalStorage(value);
   }
