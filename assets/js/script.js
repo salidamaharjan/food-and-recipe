@@ -14,28 +14,28 @@ recipeViewModal.addEventListener("click", function (event) {
     modal.classList.remove("is-active");
   }
 });
-
+var nutrientComponent = document.querySelector(".nutrient-component");
 var errorModal = document.querySelector(".error-modal");
-errorModal.addEventListener("click", function(event) {
+errorModal.addEventListener("click", function (event) {
   console.log(event.target);
   if (
     event.target.matches(".btn-close-errorModal") ||
     event.target.matches(".error-modal-container")
-  )
-  {
+  ) {
     var modal = document.querySelector(".error-modal");
-    modal.classList.remove("is-active");    
+    modal.classList.remove("is-active");
   }
 });
 
 form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
-
+  nutrientComponent.classList.remove("is-invisible");
   // Call your API function
   fetchNutrientApi();
   //fetching recipe API and display when entered an ingredient
   var recipeResult = await fetchRecipeApi($("#ingredientInput").val());
+
   // console.log(recipeResult);
   //clear out ingredient once submitted
   $("#ingredientInput").val("");
@@ -58,56 +58,55 @@ function fetchNutrientApi() {
   // check length
   if (value.length > 0) {
     saveIngredientToLocalStorage(value);
-  
+
     var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
-    value
-  )}&nutrition-type=cooking`;
-  fetch(nutrientURL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(`API Response:`, data);
+      value
+    )}&nutrition-type=cooking`;
+    fetch(nutrientURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(`API Response:`, data);
 
-      // Access the first item in the "hints" array
-      if (data.hints && data.hints.length > 0) {
-        var firstHint = data.hints[0];
+        // Access the first item in the "hints" array
+        if (data.hints && data.hints.length > 0) {
+          var firstHint = data.hints[0];
 
-        // Log general information about the food
-        console.log("Food label:", firstHint.food.label);
-        console.log("Category:", firstHint.food.category);
-        console.log("Image:", firstHint.food.image);
-        $("#foodName").text(firstHint.food.label);
-        $("#foodCategory").text(firstHint.food.category);
-        // Clear any previous image from the container
-        $("#foodImage").html("");
-        // Create an image tag
-        var foodImage = $("<img />", {
-          // Set the image src to the image URL from the API
-          src: firstHint.food.image,
-        });
-        // Append the image to <p id="foodImage"></p>
-        foodImage.appendTo($("#foodImage"));
-        // Log nutritional information
-        if (firstHint.food.nutrients) {
-          var nutrients = firstHint.food.nutrients;
-          console.log("Calories:", nutrients.ENERC_KCAL);
-          console.log("Protein:", nutrients.PROCNT);
-          console.log("Fat:", nutrients.FAT);
-          console.log("Carbohydrates:", nutrients.CHOCDF);
-          console.log("Fiber:", nutrients.FIBTG);
-          $("#calories").text(nutrients.ENERC_KCAL + " kcal");
-          $("#protein").text(nutrients.PROCNT + " g");
-          $("#fat").text(nutrients.FAT + " g");
-          $("#carbohydrates").text(nutrients.CHOCDF + " g");
-          $("#fiber").text(nutrients.FIBTG + " g");
+          // Log general information about the food
+          console.log("Food label:", firstHint.food.label);
+          console.log("Category:", firstHint.food.category);
+          console.log("Image:", firstHint.food.image);
+          $("#foodName").text(`${firstHint.food.label} per gram`);
+          $("#foodCategory").text(firstHint.food.category);
+          // Clear any previous image from the container
+          $("#foodImage").html("");
+          // Create an image tag
+          var foodImage = $("<img />", {
+            // Set the image src to the image URL from the API
+            src: firstHint.food.image,
+          });
+          // Append the image to <p id="foodImage"></p>
+          foodImage.appendTo($("#foodImage"));
+          // Log nutritional information
+          if (firstHint.food.nutrients) {
+            var nutrients = firstHint.food.nutrients;
+            console.log("Calories:", nutrients.ENERC_KCAL);
+            console.log("Protein:", nutrients.PROCNT);
+            console.log("Fat:", nutrients.FAT);
+            console.log("Carbohydrates:", nutrients.CHOCDF);
+            console.log("Fiber:", nutrients.FIBTG);
+            $("#calories").text(nutrients.ENERC_KCAL + " kcal");
+            $("#protein").text(nutrients.PROCNT + " g");
+            $("#fat").text(nutrients.FAT + " g");
+            $("#carbohydrates").text(nutrients.CHOCDF + " g");
+            $("#fiber").text(nutrients.FIBTG + " g");
+          }
+          //Clear the input field after fetched details
+          inputSection.value = "";
         }
-        //Clear the input field after fetched details
-        inputSection.value = "";
-      }
-    });
-  }
-  else {
+      });
+  } else {
     var errorModal = document.querySelector(".error-modal");
     //adding class is-active to show the modal in UI
     errorModal.classList.add("is-active");
@@ -152,7 +151,7 @@ function updateSavedIngredients() {
   // Display each saved ingredient in the list
   savedIngredients.forEach(function (ingredient) {
     ingredient = ingredient.toUpperCase();
-    
+
     var button = document.createElement("button");
     button.classList.add(
       "button",
@@ -161,12 +160,15 @@ function updateSavedIngredients() {
       "mb-2",
       "is-outlined",
       "has-text-weight-bold",
-      "is-size-4", 
-      "is-block" );
+      "is-size-4",
+      "is-block"
+    );
     button.textContent = ingredient;
 
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
+      nutrientComponent.classList.remove("is-invisible");
+
       // Handle the click event
       handleSavedIngredientClick(ingredient);
     });
@@ -175,6 +177,8 @@ function updateSavedIngredients() {
 }
 
 async function handleSavedIngredientClick(ingredient) {
+  nutrientComponent.classList.remove("is-invisible");
+
   // Fetch details for the clicked ingredient
   fetchNutrientDetails(ingredient);
   //fetch recipe API when clicked on the ingredient
@@ -187,20 +191,18 @@ function fetchNutrientDetails(ingredient) {
   var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
     ingredient
   )}&nutrition-type=cooking`;
-
   fetch(nutrientURL)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       console.log(`API Response for ${ingredient}:`, data);
-
       // Access the first item in the "hints" array
       if (data.hints && data.hints.length > 0) {
         var firstHint = data.hints[0];
 
         // Update the displayed information in the ingredientContainer
-        $("#foodName").text(firstHint.food.label);
+        $("#foodName").text(`${firstHint.food.label} per gram`);
         $("#foodCategory").text(firstHint.food.category);
 
         // Clear any previous image from the container
