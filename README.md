@@ -5,21 +5,18 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 
 ## **Key Topics**
 - Ingredient search
-- Ingredient and recipe save
+- Ingredient saved to local to use again
 - Recipe search
 
 ## **How to Use the Project**
-- When you start you enter an ingredient into the search field.
-    [ pic placeholder ]
+- When you start, enter an ingredient into the search field.
+    ![Alt text](<assets/images/1st view.png>)
 
-- You will see the ingredients
-    [ pic placeholder ]
+- You will see the ingredients and ingredient is saved for future use
+    ![Alt text](<assets/images/ingredients search.png>)
 
-- You can save the ingredient for future use
-    [ pic placeholder ]
-
-- You can click Recipes button to get recipes
-    [ pic placeholder ]
+- You can view recipes associated with your ingredient
+    ![Alt text](<assets/images/recipe searchpng.png>)
 
   
 ## **Learning Objectives**
@@ -37,6 +34,7 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 - [Static Badges](https://shields.io/badges)
 - [Stack Overflow](https://stackoverflow.com/questions/19508183/how-to-force-input-to-only-allow-alpha-letters)
+- [techsmith capure](https://support.techsmith.com/hc/en-us/articles/360033233672-Record-Video-with-TechSmith-Capture)
 
 
 
@@ -84,5 +82,5 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=)
+![Github](https://github./badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=purple)
