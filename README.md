@@ -5,20 +5,17 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 
 ## **Key Topics**
 - Ingredient search
-- Ingredient and recipe save
+- Ingredient saved to local to use again
 - Recipe search
 
 ## **How to Use the Project**
-- When you start you enter an ingredient into the search field.
+- When you start, enter an ingredient into the search field.
     [ pic placeholder ]
 
 - You will see the ingredients
     [ pic placeholder ]
 
 - You can save the ingredient for future use
-    [ pic placeholder ]
-
-- You can click Recipes button to get recipes
     [ pic placeholder ]
 
   
@@ -37,6 +34,7 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 - [Static Badges](https://shields.io/badges)
 - [Stack Overflow](https://stackoverflow.com/questions/19508183/how-to-force-input-to-only-allow-alpha-letters)
+- [techsmith capure](https://support.techsmith.com/hc/en-us/articles/360033233672-Record-Video-with-TechSmith-Capture)
 
 
 
