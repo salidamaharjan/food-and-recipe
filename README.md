@@ -10,13 +10,13 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
 
 ## **How to Use the Project**
 - When you start, enter an ingredient into the search field.
-    [ pic placeholder ]
+    ![Alt text](<assets/images/1st view.png>)
 
-- You will see the ingredients
-    [ pic placeholder ]
+- You will see the ingredients and ingredient is saved for future use
+    ![Alt text](<assets/images/ingredients search.png>)
 
-- You can save the ingredient for future use
-    [ pic placeholder ]
+- You can view recipes associated with your ingredient
+    ![Alt text](<assets/images/recipe searchpng.png>)
 
   
 ## **Learning Objectives**
