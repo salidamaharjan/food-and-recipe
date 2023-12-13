@@ -3,19 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition App</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
-    <title>Nutrition App</title>
+    <!-- added css link after external css library -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <!-- Header -->
-    <section class="hero is-primary">
+    <section class="hero">
+      <img
+        class="header-img-nutrient"
+        src="./assets/images/nutrient.png"
+        alt="Image of food"
+      />
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">Food and Recipe</h1>
+          <h1
+            class="title-h1-header has-text-white has-text-weight-bold has-background-success is-size-2 p-2"
+          >
+            Food and Recipe
+          </h1>
         </div>
       </div>
     </section>
@@ -41,7 +52,10 @@
               </div>
               <div class="field">
                 <div class="control">
-                  <button id="searchBtn" class="button search-btn is-primary is-outlined">
+                  <button
+                    id="searchBtn"
+                    class="button search-btn is-primary is-outlined"
+                  >
                     Search
                   </button>
                 </div>
@@ -61,22 +75,41 @@
               <div id="ingredientContainer" class="box columns">
                 <!-- Image column -->
                 <div class="column-is-food">
-                    <!-- <h3 id="ingredientLabel" class="title is-3">
+                  <!-- <h3 id="ingredientLabel" class="title is-3">
                       Ingredient Label
                     </h3> -->
-                    <p id="foodImage"><img src="assets/images/cutting_veggies.jpg"></p>
+                  <p id="foodImage">
+                    <img src="assets/images/cutting_veggies.jpg" />
+                  </p>
                 </div>
-               <div class="column has-text-left">
-                  <h4 id="foodName" class="title is-1 has-text-weight-bold"></h4>
+                <div class="column has-text-left">
+                  <h4
+                    id="foodName"
+                    class="title is-1 has-text-weight-bold"
+                  ></h4>
                   <!-- <h5 id="foodCategory"></h5> -->
-                  <h6 class="my-3 mt-3 has-text-weight-bold title is-4">Calories: <span id="calories" class="has-text-black"></span></h6>
-                  <h6 class="my-3 has-text-weight-bold title is-4">Protein: <span id="protein" class="has-text-black"></span></h6>
-                  <h6 class="my-3 has-text-weight-bold title is-4">Fat: <span id="fat" class="has-text-black"></span></h6>
-                  <h6 class="my-3 has-text-weight-bold title is-4">Carbohydrates: <span id="carbohydrates" class="has-text-black"></span></h6>
-                  <h6 class="my-3 has-text-weight-bold title is-4">Fiber: <span id="fiber" class="has-text-black"></span></h6>
+                  <h6 class="my-3 mt-3 has-text-weight-bold title is-4">
+                    Calories: <span id="calories" class="has-text-black"></span>
+                  </h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">
+                    Protein: <span id="protein" class="has-text-black"></span>
+                  </h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">
+                    Fat: <span id="fat" class="has-text-black"></span>
+                  </h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">
+                    Carbohydrates:
+                    <span id="carbohydrates" class="has-text-black"></span>
+                  </h6>
+                  <h6 class="my-3 has-text-weight-bold title is-4">
+                    Fiber: <span id="fiber" class="has-text-black"></span>
+                  </h6>
                 </div>
-               </div>
-              <section id="recipe-cards" class="displayed-recipes columns is-multiline"></section>
+              </div>
+              <section
+                id="recipe-cards"
+                class="displayed-recipes columns is-multiline"
+              ></section>
             </section>
           </div>
         </div>
@@ -86,21 +119,24 @@
       <div class="modal-background recipe-modal-container"></div>
       <div class="modal-content">
         <div class="columns">
-        <div class="box recipe-box column">
-        <div class="recipe-label column"></div>
-        <img class="recipe-img column" src="" alt="recipe image"/>
-        <div class="recipe-ingredientLines column">
-          <div class="has-text-weight-bold">Ingredients required</div>
-          <ol class="ingredientLines-list ml-5"></ol>
+          <div class="box recipe-box column">
+            <div class="recipe-label column"></div>
+            <img class="recipe-img column" src="" alt="recipe image" />
+            <div class="recipe-ingredientLines column">
+              <div class="has-text-weight-bold">Ingredients required</div>
+              <ol class="ingredientLines-list ml-5"></ol>
+            </div>
+            <div class="recipe-instructionLines column">
+              <div class="has-text-weight-bold">Instructions</div>
+              <ol class="instructionLines-list ml-5"></ol>
+            </div>
+          </div>
         </div>
-        <div class="recipe-instructionLines column">
-          <div class="has-text-weight-bold">Instructions</div>
-          <ol class="instructionLines-list ml-5"></ol>
-        </div>
       </div>
-      </div>
-      </div>
-      <button class="modal-close btn-close-recipeModal is-large" aria-label="close"></button>
+      <button
+        class="modal-close btn-close-recipeModal is-large"
+        aria-label="close"
+      ></button>
     </div>
     <div class="modal error-modal">
       <div class="modal-background error-modal-container"></div>
@@ -109,7 +145,10 @@
           <p>Ingredient not found</p>
         </div>
       </div>
-      <button class="modal-close btn-close-errorModal is-large" aria-label="close"></button>
+      <button
+        class="modal-close btn-close-errorModal is-large"
+        aria-label="close"
+      ></button>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./assets/js/script.js"></script>
