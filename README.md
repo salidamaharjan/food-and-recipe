@@ -16,6 +16,7 @@ Welcome to our project! This ia a Food and Recipes app made with a Bulma framewo
     ![Alt text](<assets/images/ingredients search.png>)
 
 - You can view recipes associated with your ingredient
+  
     ![Alt text](<assets/images/recipe searchpng.png>)
 
   
