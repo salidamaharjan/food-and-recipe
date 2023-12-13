@@ -1,0 +1,21 @@
+/* selecting two css to have same style */
+.hero,
+.header-img-nutrient {
+  max-height: 150px;
+}
+
+/*style given to not to stretch the image */
+.header-img-nutrient {
+  object-fit: cover;
+}
+
+/* to make the h1 in the middle of the header image */
+.hero-body {
+  position: relative;
+  bottom: 150px;
+}
+
+/* set the h1 width according to the content width */
+.title-h1-header {
+    display: inline;
+}
