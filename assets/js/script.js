@@ -57,6 +57,7 @@ function fetchNutrientApi() {
   console.log("ingredient value", value);
   // check length
   if (value.length > 0) {
+    $("#nutrition-info").removeClass("is-invisible");
     saveIngredientToLocalStorage(value);
   
     var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
