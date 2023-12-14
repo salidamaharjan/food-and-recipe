@@ -121,9 +121,12 @@ function saveIngredientToLocalStorage(ingredient) {
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
 
-  // making sure the saved ingredient do not duplicate in list 
+  // making sure the saved ingredient do not duplicate in list
   //searching in lowercase because ingredient is saved in lowercase in local storage
-  if (!savedIngredients.includes(ingredient.toLowerCase()) && ingredient.length > 0) {
+  if (
+    !savedIngredients.includes(ingredient.toLowerCase()) &&
+    ingredient.length > 0
+  ) {
     // Add the new ingredient to the top of the Array
     //saving new ingredient in lower case to search and compare ingredient easily
     savedIngredients.unshift(ingredient.toLowerCase());
@@ -157,9 +160,9 @@ function updateSavedIngredients() {
   savedIngredients.forEach(function (ingredient) {
     ingredient = ingredient.toUpperCase();
 
-    //creating a common container for button and class added
+    // creating a common container for button and class added
     var divButtonsEL = document.createElement("div");
-    divButtonsEL.setAttribute("class", "is-flex mb-2");
+    divButtonsEL.classList.add("mb-2", "saved-ingredient-btn-wrapper");
 
     var button = document.createElement("button");
     button.classList.add(
@@ -168,8 +171,7 @@ function updateSavedIngredients() {
       "is-primary",
       "is-outlined",
       "has-text-weight-bold",
-      "is-size-4",
-      "is-block"
+      "is-size-4"
     );
     button.textContent = ingredient;
 
@@ -189,9 +191,7 @@ function updateSavedIngredients() {
       "is-medium",
       "is-danger",
       "has-text-weight-bold",
-      "is-size-4",
-      "is-block",
-      "ml-1"
+      "is-size-4"
     );
     //added x icon
     close.innerHTML = `<i class="fa-solid fa-rectangle-xmark"></i>`;
@@ -269,7 +269,8 @@ $(document).ready(function () {
     var maxItemsToShow = 5;
 
     $("#ingredientList .button").each(function (index) {
-      var displayValue = screenWidth <= 768 && index >= maxItemsToShow ? "none" : "block";
+      var displayValue =
+        screenWidth <= 768 && index >= maxItemsToShow ? "none" : "block";
       $(this).css("display", displayValue);
     });
   }
@@ -280,7 +281,6 @@ $(document).ready(function () {
   // Update the visibility on window resize
   $(window).resize(updateListVisibility);
 });
-
 
 //displays the available recipe in the UI
 function displayRecipeBox(recipes) {
