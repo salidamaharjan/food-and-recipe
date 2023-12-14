@@ -31,8 +31,7 @@ errorModal.addEventListener("click", function (event) {
 form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
-  nutrientComponent.classList.remove("is-invisible");
-  displayText.remove();
+
   // Call your API function
   fetchNutrientApi();
   //fetching recipe API and display when entered an ingredient
@@ -42,6 +41,8 @@ form.addEventListener("submit", async function (event) {
   //clear out ingredient once submitted
   $("#ingredientInput").val("");
   //console.log(ingredientInput.val);
+  //showing the nutrient detail
+  nutrientComponent.classList.remove("is-hidden");
   displayRecipeBox(recipeResult);
 });
 
@@ -177,8 +178,8 @@ function updateSavedIngredients() {
 
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
-      nutrientComponent.classList.remove("is-invisible");
-      displayText.remove();
+      //showing the nutrient detail
+      nutrientComponent.classList.remove("is-hidden");
 
       // Handle the click event
       handleSavedIngredientClick(ingredient);
@@ -212,9 +213,6 @@ function updateSavedIngredients() {
 }
 
 async function handleSavedIngredientClick(ingredient) {
-  nutrientComponent.classList.remove("is-invisible");
-  displayText.remove();
-
   // Fetch details for the clicked ingredient
   fetchNutrientDetails(ingredient);
   //fetch recipe API when clicked on the ingredient
