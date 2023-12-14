@@ -178,9 +178,6 @@ function updateSavedIngredients() {
 
     // Attach a click event listener to each button
     button.addEventListener("click", function () {
-      //showing the nutrient detail
-      nutrientComponent.classList.remove("is-hidden");
-
       // Handle the click event
       handleSavedIngredientClick(ingredient);
     });
@@ -218,6 +215,8 @@ async function handleSavedIngredientClick(ingredient) {
   //fetch recipe API when clicked on the ingredient
   var recipeResult = await fetchRecipeApi(ingredient);
   console.log(recipeResult);
+  //showing the nutrient detail
+  nutrientComponent.classList.remove("is-hidden");
   displayRecipeBox(recipeResult);
 }
 
