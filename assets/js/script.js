@@ -120,9 +120,10 @@ function saveIngredientToLocalStorage(ingredient) {
   var savedIngredients =
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
+
   // making sure the saved ingredient do not duplicate in list
   if (!savedIngredients.includes(ingredient) && ingredient.length > 0) {
-    // Add the new ingredient to the top of the Array
+    // Add the new ingredient to the top of the Array 
     savedIngredients.unshift(ingredient);
     //Maximum number of history items is 20
     if (savedIngredients.length > 20) {
@@ -154,12 +155,15 @@ function updateSavedIngredients() {
   savedIngredients.forEach(function (ingredient) {
     ingredient = ingredient.toUpperCase();
 
+    //creating a common container for button and class added
+    var divButtonsEL = document.createElement("div");
+    divButtonsEL.setAttribute("class", "is-flex mb-2");
+
     var button = document.createElement("button");
     button.classList.add(
       "button",
       "is-medium",
       "is-primary",
-      "mb-2",
       "is-outlined",
       "has-text-weight-bold",
       "is-size-4",
@@ -175,7 +179,33 @@ function updateSavedIngredients() {
       // Handle the click event
       handleSavedIngredientClick(ingredient);
     });
-    savedIngredientsContainer.appendChild(button);
+
+    //created another button to delete the saved ingredient
+    var close = document.createElement("button");
+    close.classList.add(
+      "button",
+      "is-medium",
+      "is-danger",
+      "has-text-weight-bold",
+      "is-size-4",
+      "is-block",
+      "ml-1"
+    );
+    //added x icon
+    close.innerHTML = `<i class="fa-solid fa-rectangle-xmark"></i>`;
+    close.addEventListener("click", function () {
+      //finding the index of an array
+      var index = savedIngredients.indexOf(ingredient.toLowerCase());
+      savedIngredients.splice(index, 1);
+      //updating local storage
+      localStorage.setItem(
+        "savedIngredients",
+        JSON.stringify(savedIngredients)
+      );
+      updateSavedIngredients();
+    });
+    divButtonsEL.append(button, close);
+    savedIngredientsContainer.append(divButtonsEL);
   });
 }
 
