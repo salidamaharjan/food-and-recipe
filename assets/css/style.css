@@ -1,3 +1,9 @@
+html {
+  background-image: url('/assets/images/granite\ counter\ top.jpg'); 
+  background-size: stretch; 
+  background-position: cover; 
+  background-repeat: repeat; 
+}
 /* selecting two css to have same style */
 .hero,
 .header-img-nutrient {
@@ -29,6 +35,11 @@
 
 .b-0 {
   border: none;
+}
+
+.white-button {
+  color: inherit;
+  background-color: white !important; 
 }
 
 .saved-ingredient-btn-wrapper {

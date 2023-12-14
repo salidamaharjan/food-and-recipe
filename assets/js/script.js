@@ -172,7 +172,9 @@ function updateSavedIngredients() {
       "is-primary",
       "is-outlined",
       "has-text-weight-bold",
-      "is-size-6"
+      "is-size-6",
+      "is-block",
+      "white-button",
     );
     button.textContent = ingredient;
 
@@ -326,7 +328,7 @@ function constructRecipeBoxInfo(recipe) {
                           recipe.totalNutrients.FAT.quantity
                         )} ${recipe.totalNutrients.FAT.unit}</span>
                       </li>
-                      <li class="recipe-carbs has-text-white is-size-5 has-text-centered">
+                      <li class="recipe-carbs has-text-white is-size-6 has-text-centered">
                         Carbohydrates: <span>${Math.round(
                           recipe.totalNutrients.CHOCDF.quantity
                         )} ${recipe.totalNutrients.CHOCDF.unit}</span>
