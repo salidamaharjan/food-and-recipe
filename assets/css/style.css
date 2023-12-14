@@ -17,23 +17,19 @@
 
 /* set the h1 width according to the content width */
 .title-h1-header {
-    display: inline;
+  display: inline;
 }
 
 /* Default styles for larger screens */
 #ingredientButtons {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  #ingredientButtons {
-    flex: 1 0 calc(100% - 10px);
-    max-width: calc(100% - 10px);
-  }
-
   #ingredientButtons .button {
-    flex: 1 0 100%; 
+    flex: 1 0 100%;
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 5px;
@@ -48,7 +44,16 @@
 }
 
 
-
-.b-0{
+.b-0 {
   border: none;
+}
+
+.saved-ingredient-btn-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 0.5em;
+}
+.saved-ingredient-btn-wrapper .button {
+  text-wrap: wrap;
+  line-height: 1em;
 }
