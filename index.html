@@ -71,7 +71,7 @@
             </form>
 
             <div id="savedIngredients" class="mt-4">
-              <h2 class="title is-5 is-size-4">Saved Ingredients:</h2>
+              <h2 class="title is-5 is-size-4 has-text-centered">Recent Searches:</h2>
               <div id="ingredientButtons"></div>
               <ul id="ingredientList"></ul>
             </div>
@@ -81,7 +81,7 @@
             <section id="ingredientDetails" class="mt-4">
               <!-- <h5 class="title is-5">Ingredient Details</h5> -->
               <div class="column mb-5">
-                <div id="ingredientContainer" class="box columns">
+                <div id="ingredientContainer" class="box columns has-background-primary-dark with-border">
                   <!-- Image column -->
                   <div class="column-is-food">
                     <p id="foodImage">
@@ -89,30 +89,31 @@
                       <img src="assets/images/dinner-table.jpeg" />
                     </p>
                   </div>
-                  <div class="has-text-left">
-                    <div class="nutrient-component ml-3 is-hidden">
+                  <div class="has-text-centered">
+                    <div class="nutrient-component ml-3 is-hidden is-bordered"
+                          style="border: 6px solid #ccc; padding: 10px;">
                       <h4
                         id="foodName"
-                        class="title is-1 is-size-2 has-text-weight-bold"
+                        class="title is-1 is-size-2 has-text-weight-bold has-text-white"
                       ></h4>
                       <!-- <h5 id="foodCategory"></h5> -->
-                      <h6 class="my-3 mt-3 has-text-weight-bold title is-4">
+                      <h6 class="my-3 mt-3 has-text-weight-bold title is-4 has-text-white">
                         Calories:
-                        <span id="calories" class="has-text-black"></span>
+                        <span id="calories" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4">
+                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
                         Protein:
-                        <span id="protein" class="has-text-black"></span>
+                        <span id="protein" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4">
-                        Fat: <span id="fat" class="has-text-black"></span>
+                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                        Fat: <span id="fat" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4">
+                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
                         Carbohydrates:
-                        <span id="carbohydrates" class="has-text-black"></span>
+                        <span id="carbohydrates" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4">
-                        Fiber: <span id="fiber" class="has-text-black"></span>
+                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                        Fiber: <span id="fiber" class="has-text-white"></span>
                       </h6>
                     </div>
                   </div>
