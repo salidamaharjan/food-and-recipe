@@ -215,9 +215,9 @@ async function handleSavedIngredientClick(ingredient) {
   //fetch recipe API when clicked on the ingredient
   var recipeResult = await fetchRecipeApi(ingredient);
   console.log(recipeResult);
-  displayRecipeBox(recipeResult);
   //showing the nutrient detail
   nutrientComponent.classList.remove("is-hidden");
+  displayRecipeBox(recipeResult);
 }
 
 function fetchNutrientDetails(ingredient) {
