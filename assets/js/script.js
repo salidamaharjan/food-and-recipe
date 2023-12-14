@@ -172,7 +172,7 @@ function updateSavedIngredients() {
       "is-primary",
       "is-outlined",
       "has-text-weight-bold",
-      "is-size-4"
+      "is-size-6"
     );
     button.textContent = ingredient;
 
@@ -189,7 +189,7 @@ function updateSavedIngredients() {
       "is-medium",
       "is-danger",
       "has-text-weight-bold",
-      "is-size-4"
+      "is-size-6"
     );
     //added x icon
     close.innerHTML = `<i class="fa-solid fa-rectangle-xmark"></i>`;
@@ -294,7 +294,10 @@ function displayRecipeBox(recipes) {
 function constructRecipeBoxInfo(recipe) {
   console.log(recipe);
   var divEl = document.createElement("div");
-  divEl.setAttribute("class", "column is-half-mobile is-one-third-desktop is-one-quarter-widescreen");
+  divEl.setAttribute(
+    "class",
+    "column is-half-mobile is-one-third-desktop is-one-quarter-widescreen"
+  );
   divEl.innerHTML = `
                   <div
                     class="recipe box has-background-primary-dark is-flex is-flex-direction-column"
