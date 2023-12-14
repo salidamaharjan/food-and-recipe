@@ -295,7 +295,7 @@ function displayRecipeBox(recipes) {
 function constructRecipeBoxInfo(recipe) {
   console.log(recipe);
   var divEl = document.createElement("div");
-  divEl.setAttribute("class", "column is-4");
+  divEl.setAttribute("class", "column is-half-mobile is-one-third-desktop is-one-quarter-widescreen");
   divEl.innerHTML = `
                   <div
                     class="recipe box has-background-primary-dark is-flex is-flex-direction-column"
