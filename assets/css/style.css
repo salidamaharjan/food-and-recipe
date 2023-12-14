@@ -27,6 +27,38 @@
   flex-direction: column;
 }
 
+.b-0 {
+  border: none;
+}
+
+.saved-ingredient-btn-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 0.5em;
+}
+.saved-ingredient-btn-wrapper .button {
+  text-wrap: wrap;
+  line-height: 1em;
+}
+
+/* Override Bulma column display and width */
+#recipe-cards .columns.is-mobile {
+  display: block;
+}
+#recipe-cards .column.is-half-mobile {
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  /* Use Bulma column display and width */
+  #recipe-cards .columns.is-mobile {
+    display: flex;
+  }
+  #recipe-cards .column.is-half-mobile {
+    width: 50%;
+  }
+}
+
 @media (min-width: 768px) {
   #ingredientButtons .button {
     flex: 1 0 100%;
@@ -43,17 +75,16 @@
   }
 }
 
-
-.b-0 {
-  border: none;
+@media screen and (min-width: 1024px) {
+  /* Use Bulma column width */
+  #recipe-cards .column.is-one-third-desktop {
+    width: 33.3333%;
+  }
 }
 
-.saved-ingredient-btn-wrapper {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  gap: 0.5em;
-}
-.saved-ingredient-btn-wrapper .button {
-  text-wrap: wrap;
-  line-height: 1em;
+@media screen and (min-width: 1216px) {
+  /* Use Bulma column width */
+  #recipe-cards .column.is-one-quarter-widescreen {
+    width: 25%;
+  }
 }
