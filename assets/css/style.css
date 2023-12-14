@@ -28,11 +28,6 @@
 }
 
 @media (min-width: 768px) {
-  #ingredientButtons {
-    flex: 1 0 calc(100% - 10px);
-    max-width: calc(100% - 10px);
-  }
-
   #ingredientButtons .button {
     flex: 1 0 100%;
     max-width: 100%;
