@@ -80,7 +80,7 @@ function fetchNutrientApi() {
           console.log("Food label:", firstHint.food.label);
           console.log("Category:", firstHint.food.category);
           console.log("Image:", firstHint.food.image);
-          $("#foodName").text(`${firstHint.food.label} per gram`);
+          $("#foodName").text(`${firstHint.food.label}`);
           $("#foodCategory").text(firstHint.food.category);
           // Clear any previous image from the container
           $("#foodImage").html("");
@@ -236,7 +236,7 @@ function fetchNutrientDetails(ingredient) {
         var firstHint = data.hints[0];
 
         // Update the displayed information in the ingredientContainer
-        $("#foodName").text(`${firstHint.food.label} per gram`);
+        $("#foodName").text(`${firstHint.food.label}`);
         $("#foodCategory").text(firstHint.food.category);
 
         // Clear any previous image from the container
