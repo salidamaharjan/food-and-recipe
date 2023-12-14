@@ -300,7 +300,7 @@ function constructRecipeBoxInfo(recipe) {
   );
   divEl.innerHTML = `
                   <div
-                    class="recipe box has-background-primary-dark is-flex is-flex-direction-column"
+                    class="recipe container box has-background-primary-dark is-flex is-flex-direction-column"
                   >
                     <div
                       class="recipe-name has-text-white has-text-weight-bold is-size-4 has-text-centered mb-1"
