@@ -121,10 +121,12 @@ function saveIngredientToLocalStorage(ingredient) {
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
   console.log("Saved ingredients before:", savedIngredients);
 
-  // making sure the saved ingredient do not duplicate in list
-  if (!savedIngredients.includes(ingredient) && ingredient.length > 0) {
-    // Add the new ingredient to the top of the Array 
-    savedIngredients.unshift(ingredient);
+  // making sure the saved ingredient do not duplicate in list 
+  //searching in lowercase because ingredient is saved in lowercase in local storage
+  if (!savedIngredients.includes(ingredient.toLowerCase()) && ingredient.length > 0) {
+    // Add the new ingredient to the top of the Array
+    //saving new ingredient in lower case to search and compare ingredient easily
+    savedIngredients.unshift(ingredient.toLowerCase());
     //Maximum number of history items is 20
     if (savedIngredients.length > 20) {
       savedIngredients = savedIngredients.slice(0, 10);
