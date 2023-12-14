@@ -172,7 +172,7 @@ function updateSavedIngredients() {
       "is-primary",
       "is-outlined",
       "has-text-weight-bold",
-      "is-size-5"
+      "is-size-6"
     );
     button.textContent = ingredient;
 
@@ -189,7 +189,7 @@ function updateSavedIngredients() {
       "is-medium",
       "is-danger",
       "has-text-weight-bold",
-      "is-size-5"
+      "is-size-6"
     );
     //added x icon
     close.innerHTML = `<i class="fa-solid fa-rectangle-xmark"></i>`;
