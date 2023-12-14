@@ -9,6 +9,10 @@ Welcome to our project! This ia a Food and Recipes app made with Bulma framework
 - Recipe displayed based on your ingredient searched
 
 ## **How to Use the Project**
+
+  - [How to video of our site](https://app.screencast.com/PwYaImigU4gDg)
+
+
 - When you start, enter an ingredient into the search field.
     ![Alt text](<assets/images/1st view.png>)
 
@@ -19,7 +23,8 @@ Welcome to our project! This ia a Food and Recipes app made with Bulma framework
   
     ![Alt text](<assets/images/recipe searchpng.png>)
 
-  
+
+
 ## **Learning Objectives**
 - You will be able to gather nutrition information based on the ingredient you entered into the search field.
 - From the ingredient chosen you will be able to also view recipes that have your ingredient choice.
@@ -30,6 +35,7 @@ Welcome to our project! This ia a Food and Recipes app made with Bulma framework
  ## **Credits**
 
 - [Bulma](https://bulma.io/)
+- [Edamam](https://www.edamam.com/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [W3 Schools](https://www.w3schools.com/)
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
