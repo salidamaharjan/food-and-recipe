@@ -263,6 +263,24 @@ function fetchNutrientDetails(ingredient) {
       }
     });
 }
+$(document).ready(function () {
+  function updateListVisibility() {
+    var screenWidth = $(window).width();
+    var maxItemsToShow = 5;
+
+    $("#ingredientList .button").each(function (index) {
+      var displayValue = screenWidth <= 768 && index >= maxItemsToShow ? "none" : "block";
+      $(this).css("display", displayValue);
+    });
+  }
+
+  // Initial update on page load
+  updateListVisibility();
+
+  // Update the visibility on window resize
+  $(window).resize(updateListVisibility);
+});
+
 
 //displays the available recipe in the UI
 function displayRecipeBox(recipes) {

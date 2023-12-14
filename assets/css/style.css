@@ -20,6 +20,35 @@
     display: inline;
 }
 
+/* Default styles for larger screens */
+#ingredientButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  #ingredientButtons {
+    flex: 1 0 calc(100% - 10px);
+    max-width: calc(100% - 10px);
+  }
+
+  #ingredientButtons .button {
+    flex: 1 0 100%; 
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+/* edit this code block out and list items will appear inline and stretch the container */
+@media (max-width: 768px) {
+  #ingredientButtons .button {
+    flex: 1 0 calc(100% - 10px);
+    max-width: calc(100% - 10px);
+  }
+}
+
+
+
 .b-0{
   border: none;
 }

@@ -1,12 +1,12 @@
 # ***Food and Recipes***
 
 ## **Description**   
-Welcome to our project! This ia a Food and Recipes app made with a Bulma framework. It allows users to search an ingredient and receive the nutrition information and recipes based on the ingredient they choose. 
+Welcome to our project! This ia a Food and Recipes app made with Bulma framework. It allows users to search an ingredient and receive the nutrition information and recipes based on the ingredient they choose. 
 
 ## **Key Topics**
 - Ingredient search
 - Ingredient saved to local to use again
-- Recipe search
+- Recipe displayed based on your ingredient searched
 
 ## **How to Use the Project**
 - When you start, enter an ingredient into the search field.
