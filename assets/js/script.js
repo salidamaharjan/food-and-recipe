@@ -1,53 +1,60 @@
 var form = document.querySelector("#ingredientForm");
+//match any characters that are not letters both upper and lower case
 var regexNotLettersSpaces = /[^a-zA-Z\s]/g;
-//closing the modal when cross or the outside of the box is clicked
+//recipe view of the modal element
 var recipeViewModal = document.querySelector(".recipe-view-modal");
+//event listener to close the modal when clicked outside of the content or the close button
 recipeViewModal.addEventListener("click", function (event) {
   console.log(event.target);
-  //we want to close the modal when clicked outside of the content box and
-  //cross button
+  //check if the click event is outside of the content or the close button
   if (
     event.target.matches(".btn-close-recipeModal") ||
     event.target.matches(".recipe-modal-container")
   ) {
+    //select the modal
     var modal = document.querySelector(".modal");
+    //hide the modal
     modal.classList.remove("is-active");
   }
 });
+//Variables to display nutrient information, error messages, and text
 var nutrientComponent = document.querySelector(".nutrient-component");
 var errorModal = document.querySelector(".error-modal");
 var displayText = document.querySelector(".display-text");
+//event listener to close the error modal when clicked outside the content or the close button
 errorModal.addEventListener("click", function (event) {
   console.log(event.target);
+  //check if the click event is outside of the content or the close button
   if (
     event.target.matches(".btn-close-errorModal") ||
     event.target.matches(".error-modal-container")
   ) {
+    //select modal
     var modal = document.querySelector(".error-modal");
+    //hide the modal
     modal.classList.remove("is-active");
   }
 });
-
+//Form Submission
 form.addEventListener("submit", async function (event) {
   // Prevent the default form submission
   event.preventDefault();
 
-  // Call your API function
+  // Call API function for nutrient information
   fetchNutrientApi();
-  //fetching recipe API and display when entered an ingredient
+  //fetching recipe API and display result after ingredient is submitted
   var recipeResult = await fetchRecipeApi($("#ingredientInput").val());
-
-  // console.log(recipeResult);
   //clear out ingredient once submitted
   $("#ingredientInput").val("");
-  //console.log(ingredientInput.val);
   //showing the nutrient detail
   nutrientComponent.classList.remove("is-hidden");
+  //display recipe box with fetched information
   displayRecipeBox(recipeResult);
 });
 
 // Call updateSavedIngredients when the page loads
 window.addEventListener("load", function () {
+  //update the list of saved ingredients 
   updateSavedIngredients();
 });
 
@@ -61,11 +68,12 @@ function fetchNutrientApi() {
   // check length
   if (value.length > 0) {
     saveIngredientToLocalStorage(value);
-
+    //Fetch the nutrient information
     var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
       value
     )}&nutrition-type=cooking`;
     fetch(nutrientURL)
+      //Request to retrieve nutrient data
       .then(function (response) {
         return response.json();
       })
@@ -75,11 +83,7 @@ function fetchNutrientApi() {
         // Access the first item in the "hints" array
         if (data.hints && data.hints.length > 0) {
           var firstHint = data.hints[0];
-
-          // Log general information about the food
-          console.log("Food label:", firstHint.food.label);
-          console.log("Category:", firstHint.food.category);
-          console.log("Image:", firstHint.food.image);
+          //Update UI
           $("#foodName").text(`${firstHint.food.label}`);
           $("#foodCategory").text(firstHint.food.category);
           // Clear any previous image from the container
@@ -94,11 +98,6 @@ function fetchNutrientApi() {
           // Log nutritional information
           if (firstHint.food.nutrients) {
             var nutrients = firstHint.food.nutrients;
-            console.log("Calories:", nutrients.ENERC_KCAL);
-            console.log("Protein:", nutrients.PROCNT);
-            console.log("Fat:", nutrients.FAT);
-            console.log("Carbohydrates:", nutrients.CHOCDF);
-            console.log("Fiber:", nutrients.FIBTG);
             $("#calories").text(nutrients.ENERC_KCAL + " kcal");
             $("#protein").text(nutrients.PROCNT + " g");
             $("#fat").text(nutrients.FAT + " g");
@@ -132,8 +131,8 @@ function saveIngredientToLocalStorage(ingredient) {
     //saving new ingredient in lower case to search and compare ingredient easily
     savedIngredients.unshift(ingredient.toLowerCase());
     //Maximum number of history items is 5
-    if (savedIngredients.length > 1) {
-      savedIngredients = savedIngredients.slice(0, 5);
+    if (savedIngredients.length > 20) {
+      savedIngredients = savedIngredients.slice(0, 10);
     }
     // Save the updated array back to local storage
     localStorage.setItem("savedIngredients", JSON.stringify(savedIngredients));
@@ -147,26 +146,26 @@ function saveIngredientToLocalStorage(ingredient) {
 
 // Update saved ingredients in the "Saved Ingredients" section
 function updateSavedIngredients() {
+  //references to html elements
   var savedIngredientsContainer = document.getElementById("ingredientButtons");
   var savedIngredientsList = document.getElementById("ingredientList");
-  
+  //retrieve saved ingredients from local storage OR initialize empty array
   var savedIngredients =
     JSON.parse(localStorage.getItem("savedIngredients")) || [];
-
+  //max number of ingredients to be displayed is 5 most recent searches
   savedIngredients = savedIngredients.slice(0,5);
   // Clear existing content
   savedIngredientsContainer.innerHTML = "";
   savedIngredientsList.innerHTML = "";
-
-  // Get saved ingredients from local storage
-  // Display each saved ingredient in the list
+  //display each saved ingredient to the UI
   savedIngredients.forEach(function (ingredient) {
+    //convert all ingredients to uppercase for consistency 
     ingredient = ingredient.toUpperCase();
 
     // creating a common container for button and class added
     var divButtonsEL = document.createElement("div");
     divButtonsEL.classList.add("mb-2", "saved-ingredient-btn-wrapper");
-
+    //button for each saved ingredient
     var button = document.createElement("button");
     button.classList.add(
       "button",
@@ -202,29 +201,32 @@ function updateSavedIngredients() {
       //finding the index of an array
       var index = savedIngredients.indexOf(ingredient.toLowerCase());
       savedIngredients.splice(index, 1);
-      //updating local storage
+      //updating local storage with modified array
       localStorage.setItem(
         "savedIngredients",
         JSON.stringify(savedIngredients)
       );
+      //updated ingredients in on the UI
       updateSavedIngredients();
     });
+    //append buttons to the container
     divButtonsEL.append(button, close);
     savedIngredientsContainer.append(divButtonsEL);
   });
 }
-
+//handle click event on a saved ingredient
 async function handleSavedIngredientClick(ingredient) {
   // Fetch details for the clicked ingredient
   fetchNutrientDetails(ingredient);
   //fetch recipe API when clicked on the ingredient
   var recipeResult = await fetchRecipeApi(ingredient);
   console.log(recipeResult);
-  //showing the nutrient detail
+  //display nutrient details on UI
   nutrientComponent.classList.remove("is-hidden");
+  //display recipe 
   displayRecipeBox(recipeResult);
 }
-
+//Fetch nutrient details for searched ingredient
 function fetchNutrientDetails(ingredient) {
   var nutrientURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=f02972e7&app_key=3d2353afd7e7eccce279b9f2bb359688&ingr=${encodeURIComponent(
     ingredient
@@ -279,11 +281,13 @@ function displayRecipeBox(recipes) {
 //creating new element according to the recipe and return created element
 function constructRecipeBoxInfo(recipe) {
   console.log(recipe);
+  //create new div element for recipe box
   var divEl = document.createElement("div");
   divEl.setAttribute(
     "class",
     "column is-half-mobile is-one-third-desktop is-one-quarter-widescreen"
   );
+  //set the HTML for the recipe box
   divEl.innerHTML = `
                   <div
                     class="recipe container box has-background-primary-dark is-flex is-flex-direction-column"
@@ -327,13 +331,16 @@ function constructRecipeBoxInfo(recipe) {
                       View Recipe
                     </button>
                   </div>`;
-  //recipe button is only found in the div element because it is not attached to HTML yet
+  //Event listener to the view recipe button
   var recipeBtn = divEl.querySelector(".btn-recipe-view");
   recipeBtn.addEventListener("click", function () {
+    //create and display the recipe modal
     createRecipeModal(recipe);
   });
+  //return the created div element
   return divEl;
 }
+//
 function createRecipeModal(recipe) {
   var recipeModal = document.querySelector(".recipe-view-modal");
   //adding class is-active to show the modal in UI
@@ -346,6 +353,7 @@ function createRecipeModal(recipe) {
   //searching add to favorite button from the html to DOM
   var favBtn = document.querySelector(".add-favorite");
   favBtn.addEventListener("click", function () {
+    //add recipe to the saved recipes in local storage
     var savedRecipe = JSON.parse(localStorage.getItem("savedRecipe")) || [];
     if (
       savedRecipe.some(function (item) {
@@ -365,7 +373,7 @@ function createRecipeModal(recipe) {
     ingredientLinesListOl.append(ingredientLinesLi);
     ingredientLinesLi.textContent = recipe.ingredientLines[i];
   }
-
+  //display instructions in a list or provide link
   if (recipe.instructionLines.length === 0) {
     // <a class="button">Anchor</a>
     var recipeInstructionLines = document.querySelector(
