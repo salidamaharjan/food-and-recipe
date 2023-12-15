@@ -37,9 +37,13 @@ html {
   border: none;
 }
 
-.white-button {
-  color: inherit;
+.white-button,
+#searchBtn {
   background-color: white !important; 
+}
+
+.white-button:hover {
+  background-color: hsl(171, 100%, 41%) !important;
 }
 
 .saved-ingredient-btn-wrapper {
