@@ -46,7 +46,9 @@
           <!-- Ingredient Entry Column -->
           <div class="column is-one-third">
             <form id="ingredientForm" class="mt-5">
-              <h2 class="title is-5 is-size-4">Ingredient Name</h2>
+              <div class="notification has-background-primary-dark has-text-white">
+                <h2 class="title is-5 is-size-4 has-text-centered">Ingredient Name</h2>
+              </div>
               <div class="field">
                 <div class="control">
                   <input
@@ -54,15 +56,15 @@
                     id="ingredientInput"
                     class="input"
                     placeholder="Ingredient"
-                    maxlength="15"
+                    maxlength="5"
                   />
                 </div>
               </div>
               <div class="field">
-                <div class="control">
+                <div class="control has-text-centered">
                   <button
                     id="searchBtn"
-                    class="button search-btn is-primary is-outlined"
+                    class="button search-btn is-primary is-outlined has-text-primary"
                   >
                     Search
                   </button>
@@ -78,9 +80,9 @@
             </div>
 
             <div id="savedIngredients" class="mt-4">
-              <h2 class="title is-5 is-size-4 has-text-centered">
-                Recent Searches:
-              </h2>
+              <div class="notification has-background-primary-dark has-text-white">
+                <h2 class="title is-5 is-size-4 has-text-centered">Recent Searches</h2>
+              </div>
               <div id="ingredientButtons"></div>
               <ul id="ingredientList"></ul>
             </div>
