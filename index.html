@@ -56,21 +56,28 @@
                     id="ingredientInput"
                     class="input"
                     placeholder="Ingredient"
-                    maxlength="5"
+                    maxlength="20"
                   />
                 </div>
               </div>
               <div class="field">
-                <div class="control has-text-centered">
+                <div class="control has-text-left">
                   <button
                     id="searchBtn"
-                    class="button search-btn is-primary is-outlined has-text-primary"
+                    class="button search-btn is-primary is-outlined has-text-primary is-size-5 has-text-weight-bold"
                   >
                     Search
                   </button>
                 </div>
               </div>
             </form>
+            <div class="favorite-recipe has-text-weight-bold mt-5">
+              <a
+                href="./favorite-recipe.html"
+                class="button is-outlined is-primary has-background-white has-text-primary"
+                >Favorite Recipe</a
+              >
+            </div>
 
             <div id="savedIngredients" class="mt-4">
               <div class="notification has-background-primary-dark has-text-white">
@@ -83,9 +90,11 @@
 
           <div class="column is-two-third">
             <section id="ingredientDetails" class="mt-4">
-              <!-- <h5 class="title is-5">Ingredient Details</h5> -->
               <div class="column mb-5">
-                <div id="ingredientContainer" class="box columns has-background-primary-dark with-border">
+                <div
+                  id="ingredientContainer"
+                  class="box columns has-background-primary-dark with-border"
+                >
                   <!-- Image column -->
                   <div class="column-is-food">
                     <p id="foodImage">
@@ -94,29 +103,41 @@
                     </p>
                   </div>
                   <div class="has-text-centered">
-                    <div class="nutrient-component ml-3 is-hidden is-bordered"
-                          style="border: 6px solid #ccc; padding: 10px;">
+                    <div
+                      class="nutrient-component ml-3 is-hidden is-bordered"
+                      style="border: 6px solid #ccc; padding: 10px"
+                    >
                       <h4
                         id="foodName"
                         class="title is-1 is-size-2 has-text-weight-bold has-text-white"
                       ></h4>
                       <!-- <h5 id="foodCategory"></h5> -->
-                      <h6 class="my-3 mt-3 has-text-weight-bold title is-4 has-text-white">
+                      <h6
+                        class="my-3 mt-3 has-text-weight-bold title is-4 has-text-white"
+                      >
                         Calories:
                         <span id="calories" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                      <h6
+                        class="my-3 has-text-weight-bold title is-4 has-text-white"
+                      >
                         Protein:
                         <span id="protein" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                      <h6
+                        class="my-3 has-text-weight-bold title is-4 has-text-white"
+                      >
                         Fat: <span id="fat" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                      <h6
+                        class="my-3 has-text-weight-bold title is-4 has-text-white"
+                      >
                         Carbohydrates:
                         <span id="carbohydrates" class="has-text-white"></span>
                       </h6>
-                      <h6 class="my-3 has-text-weight-bold title is-4 has-text-white">
+                      <h6
+                        class="my-3 has-text-weight-bold title is-4 has-text-white"
+                      >
                         Fiber: <span id="fiber" class="has-text-white"></span>
                       </h6>
                     </div>
@@ -137,17 +158,26 @@
       <div class="modal-content">
         <div class="columns">
           <div class="box recipe-box column">
-            <div class="column">
-              <div class="recipe-label has-text-weight-bold is-size-4"></div>
+            <div class="column has-text-right p-0">
+              <div
+                class="button add-favorite is-outlined is-primary has-text-weight-bold mr-5 mt-5"
+              >
+                Add to favorite
+              </div>
             </div>
-            <img class="recipe-img column" src="" alt="recipe image" />
-            <div class="recipe-ingredientLines column">
-              <div class="has-text-weight-bold">Ingredients required</div>
-              <ol class="ingredientLines-list ml-5"></ol>
-            </div>
-            <div class="recipe-instructionLines column">
-              <div class="has-text-weight-bold">Instructions</div>
-              <ol class="instructionLines-list ml-5"></ol>
+            <div class="column recipe-detail">
+              <div class="column pt-0">
+                <div class="recipe-label has-text-weight-bold is-size-4"></div>
+              </div>
+              <img class="recipe-img column" src="" alt="recipe image" />
+              <div class="recipe-ingredientLines column">
+                <div class="has-text-weight-bold">Ingredients required</div>
+                <ol class="ingredientLines-list ml-5"></ol>
+              </div>
+              <div class="recipe-instructionLines column">
+                <div class="has-text-weight-bold">Instructions</div>
+                <ol class="instructionLines-list ml-5"></ol>
+              </div>
             </div>
           </div>
         </div>

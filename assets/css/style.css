@@ -1,3 +1,4 @@
+/* Background image covering whole page */
 html {
   background-image:  url('/food-recipe/assets/images/granite counter top.jpg');
   background-size: stretch; 
@@ -32,14 +33,18 @@ html {
   flex-wrap: wrap;
   flex-direction: column;
 }
-
+/* border style */
 .b-0 {
   border: none;
 }
+/* search button */
 #searchBtn {
   background-color: white;
 }
-
+#searchBtn:hover{
+  background-color: gold !important;
+}
+/* buttons in the search history */
 .white-button {
   background-color: whitesmoke !important;
 }
@@ -61,12 +66,12 @@ html {
   text-wrap: wrap;
   line-height: 1em;
 }
-
+/* recipe container */
 .recipe {
   height: 100%;
   padding-bottom: 80px;
 }
-
+/* "View Recipe" button */
 .btn-recipe-view {
   position: absolute;
   bottom: 20px;
