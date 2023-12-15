@@ -36,6 +36,7 @@ Welcome to our project! This ia a Food and Recipes app made with Bulma framework
 
 - [Bulma](https://bulma.io/)
 - [Edamam](https://www.edamam.com/)
+- [Github](https://github.com/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [W3 Schools](https://www.w3schools.com/)
 - [Free Coding Camp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
@@ -50,27 +51,7 @@ Welcome to our project! This ia a Food and Recipes app made with Bulma framework
 ## **License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## **Top Technologies Used**
-
-<!-- ![Static Badge](https://img.shields.io/badge/BULMA-b?style=flat-square&logo=bulma&logoColor=black&color=Green)
-
-![Static Badge](https://img.shields.io/badge/JSON-j?style=flat-square&logo=json&color=yellow)
-![Static Badge](https://img.shields.io/badge/SLACK-s?style=flat-square&logo=slack&logoColor=black&color=blue)
-
-![Static Badge](https://img.shields.io/badge/JQUERY-j?style=flat-square&logo=jquery&logoColor=black&color=pink)
-![Static Badge](https://img.shields.io/badge/JAVASCRIPT-J?style=flat-square&logo=javascript&logoColor=Pink&color=black)
-
-
-![Static Badge](https://img.shields.io/badge/VS%20Code-v?style=flat-square&logo=visualstudiocode&logoColor=black&color=red)
-![Static Badge](https://img.shields.io/badge/GITLAB-g?style=flat-square&logo=gitlab&color=grey)
-![Static Badge](https://img.shields.io/badge/GITHUB-g?style=flat-square&logo=github&logoColor=black&color=cyan)
-
-<!-- 
-![Static Badge](https://img.shields.io/badge/mdn%20web%20docs-m?style=flat-square&logo=mdnwebdocs&logoColor=black&color=blue)
-![Static Badge](https://img.shields.io/badge/W3%20Schools-w?style=flat-square&logo=w3schools&logoColor=black&color=green) -->
-
- <!-- [![npm version](https://badge.fury.io/js/bulma.svg)](https://badge.fury.io/js/bulma)  -->
-
+## **Technologies Used**
 
 ![Bulma](https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white)
 [NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
