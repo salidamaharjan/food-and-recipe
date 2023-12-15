@@ -174,7 +174,7 @@ function updateSavedIngredients() {
       "has-text-weight-bold",
       "is-size-6",
       "is-block",
-      "white-button",
+      "white-button"
     );
     button.textContent = ingredient;
 
@@ -359,6 +359,19 @@ function createRecipeModal(recipe) {
   var recipeImg = document.querySelector(".recipe-img");
   recipeImg.setAttribute("src", recipe.images.THUMBNAIL.url);
 
+  //searching add to favorite button from the html to DOM
+  var favBtn = document.querySelector(".add-favorite");
+  favBtn.addEventListener("click", function () {
+    var savedRecipe = JSON.parse(localStorage.getItem("savedRecipe")) || [];
+    if(savedRecipe.some(function(item){
+      return item.label === recipe.label;
+    })){
+      return;
+    }
+    savedRecipe.push(recipe);
+    localStorage.setItem("savedRecipe", JSON.stringify(savedRecipe));
+  });
+
   //looping through the items of ingredientLines and putting the value to list
   for (var i = 0; i < recipe.ingredientLines.length; i++) {
     var ingredientLinesListOl = document.querySelector(".ingredientLines-list");
@@ -393,12 +406,12 @@ function createRecipeModal(recipe) {
 async function fetchRecipeApi(recipe) {
   //strip out anything other than letters and spaces
   value = recipe.replace(regexNotLettersSpaces, "");
-  var response = await fetch(
-    `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
-      value
-    )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
-  );
-  // var response = await fetch(`./assets/js/recipe.json`);
+  // var response = await fetch(
+  //   `https://api.edamam.com/api/recipes/v2?type=public&q=${encodeURIComponent(
+  //     value
+  //   )}&app_id=df46ca95&app_key=277fe705327a2981fb85ba1e1202742a`
+  // );
+  var response = await fetch(`./assets/js/recipe.json`);
   var result = await response.json();
   return result;
 }
