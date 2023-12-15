@@ -343,6 +343,21 @@ function createRecipeModal(recipe) {
   var recipeImg = document.querySelector(".recipe-img");
   recipeImg.setAttribute("src", recipe.images.THUMBNAIL.url);
 
+  //searching add to favorite button from the html to DOM
+  var favBtn = document.querySelector(".add-favorite");
+  favBtn.addEventListener("click", function () {
+    var savedRecipe = JSON.parse(localStorage.getItem("savedRecipe")) || [];
+    if (
+      savedRecipe.some(function (item) {
+        return item.label === recipe.label;
+      })
+    ) {
+      return;
+    }
+    savedRecipe.push(recipe);
+    localStorage.setItem("savedRecipe", JSON.stringify(savedRecipe));
+  });
+
   //looping through the items of ingredientLines and putting the value to list
   for (var i = 0; i < recipe.ingredientLines.length; i++) {
     var ingredientLinesListOl = document.querySelector(".ingredientLines-list");
