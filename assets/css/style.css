@@ -120,9 +120,3 @@ html {
   }
 }
 
-@media screen and (min-width: 1216px) {
-  /* Use Bulma column width */
-  #recipe-cards .column.is-one-quarter-widescreen {
-    width: 25%;
-  }
-}
