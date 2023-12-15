@@ -177,6 +177,7 @@ function updateSavedIngredients() {
       "is-size-6",
       "is-block",
       "white-button",
+      "has-text-primary"
     );
     button.textContent = ingredient;
 

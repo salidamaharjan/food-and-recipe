@@ -36,14 +36,20 @@ html {
 .b-0 {
   border: none;
 }
-
-.white-button,
 #searchBtn {
-  background-color: white !important; 
+  background-color: white;
+}
+
+.white-button {
+  background-color: whitesmoke !important;
 }
 
 .white-button:hover {
-  background-color: hsl(171, 100%, 41%) !important;
+  background-color: gold !important;
+}
+
+.white-button:active{
+  background-color: aquamarine !important;
 }
 
 .saved-ingredient-btn-wrapper {
