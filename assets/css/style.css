@@ -1,5 +1,5 @@
 html {
-  background-image: url('/food-recipe/assets/images/granite counter top.jpg'); 
+  background-image:  url('/food-recipe/assets/images/granite counter top.jpg');
   background-size: stretch; 
   background-position: cover; 
   background-repeat: repeat; 
@@ -36,10 +36,20 @@ html {
 .b-0 {
   border: none;
 }
+#searchBtn {
+  background-color: white;
+}
 
 .white-button {
-  color: inherit;
-  background-color: white !important; 
+  background-color: whitesmoke !important;
+}
+
+.white-button:hover {
+  background-color: gold !important;
+}
+
+.white-button:active{
+  background-color: aquamarine !important;
 }
 
 .saved-ingredient-btn-wrapper {
