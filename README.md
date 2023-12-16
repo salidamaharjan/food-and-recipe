@@ -11,7 +11,7 @@ Welcome to our project! This is a Food and Recipes site made with a Bulma framew
 
 ## **How to Use the Project**
 
-- [How to video of our site](https://app.screencast.com/PwYaImigU4gDg)
+- [A video of how our site works](https://app.screencast.com/24QE8ioeHJ6PG)
 
 - [Food and Recipes site](https://salidamaharjan.github.io/food-and-recipe/)
 
@@ -41,21 +41,6 @@ Welcome to our project! This is a Food and Recipes site made with a Bulma framew
 - You will be able to view recipes and view the nutritional information.
 - If you like a recipe you can save it to your favorites.
 - With having the nutritional information about a single ingredient and the recipes you will be able to make an informed decision on your food intake.
-
-## Installation:
-  - ### Create a new repo on GitHub
-      - Go to the upper right corner and click the + icon to create a New Repository
-      - Enter a unique repo name (lower case & no spaces)
-      - Select License (basic = MIT License)
-      - Click Create Repository 
-
-  - ### Clone the repo to a folder on your machine
-      - Navigate to the directory you want to clone
-      - git clone https://github.com/url-TO_REPO_HERE
-          - git clone command - it copies the repo from github  to your local computer
-      - git clone https://github.com/YOUR-USERNAME/YOURREPOSITORY
-          - Your command line should respond as below.
-            ![Alt text](assets/images/clone.png)
 
  ## **Credits**
 - [Bulma](https://bulma.io/)
