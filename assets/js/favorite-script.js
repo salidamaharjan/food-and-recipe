@@ -1,7 +1,9 @@
+//Retrieve saved recipes from local storage or initialize empty array
 var savedRecipe = JSON.parse(localStorage.getItem("savedRecipe")) || [];
 console.log(savedRecipe);
+//Display saved recipes to UI
 displayRecipeBox(savedRecipe);
-
+//get recipe view modal element and add event listener
 var recipeViewModal = document.querySelector(".recipe-view-modal");
 recipeViewModal.addEventListener("click", function (event) {
   //we want to close the modal when clicked outside of the content box and
@@ -25,13 +27,16 @@ function displayRecipeBox(recipes) {
     displayedRecipes.append(recipeEl);
   }
 }
+//Build the HTML for a recipe box
 function constructRecipeBoxInfo(recipe) {
   console.log(recipe);
   var divEl = document.createElement("div");
+  //set Bulma classes for styling and responsiveness 
   divEl.setAttribute(
     "class",
     "column is-half-mobile is-one-third-desktop is-one-quarter-widescreen"
   );
+  //populate the HTML content for the recipe box
   divEl.innerHTML = `
                     <div
                       class="recipe container box has-background-primary-dark is-flex is-flex-direction-column"
@@ -82,23 +87,29 @@ function constructRecipeBoxInfo(recipe) {
   });
   return divEl;
 }
+//create and display a modal for a specific recipe
 function createRecipeModal(recipe) {
   var recipeModal = document.querySelector(".recipe-view-modal");
   //adding class is-active to show the modal in UI
   recipeModal.classList.add("is-active");
+  //update modal content with recipe details
   var recipeLabel = document.querySelector(".recipe-label");
   recipeLabel.textContent = recipe.label;
   var recipeImg = document.querySelector(".recipe-img");
   recipeImg.setAttribute("src", recipe.images.THUMBNAIL.url);
 
+  //event listener to "remove from favorites" button
   var remBtn = document.querySelector(".remove-favorite");
   remBtn.addEventListener("click", function () {
+    //remove the recipe from local storage
     var savedRecipe = JSON.parse(localStorage.getItem("savedRecipe")) || [];
     savedRecipe = savedRecipe.filter(function (item) {
       return item.label !== recipe.label;
     });
     localStorage.setItem("savedRecipe", JSON.stringify(savedRecipe));
+    //update displayed recipe box
     displayRecipeBox(savedRecipe);
+    //close the modal
     var modal = document.querySelector(".modal");
     modal.classList.remove("is-active");
   });
@@ -110,7 +121,7 @@ function createRecipeModal(recipe) {
     ingredientLinesListOl.append(ingredientLinesLi);
     ingredientLinesLi.textContent = recipe.ingredientLines[i];
   }
-
+  //display link to external instructions if available
   if (recipe.instructionLines.length === 0) {
     // <a class="button">Anchor</a>
     var recipeInstructionLines = document.querySelector(
