@@ -33,6 +33,8 @@ Welcome to our project! This is a Food and Recipes site made with a Bulma framew
 - Favorites recipes saved
     ![Alt text](<assets/images/favorite recipes.png>)
 
+- Modal alert for incorrect value
+    ![Alt text](<assets/images/modal alert.png>)
 
 ## **Learning Objectives**
 - You will be able to gather nutrition information based on the ingredient you entered into the search field.
