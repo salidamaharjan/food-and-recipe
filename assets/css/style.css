@@ -1,6 +1,6 @@
 /* Background image covering whole page */
 html {
-  background-image:  url('/food-recipe/assets/images/granite counter top.jpg');
+  background-image:  url('../images/granite counter top.jpg');
   background-size: stretch; 
   background-position: cover; 
   background-repeat: repeat; 
