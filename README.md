@@ -1,18 +1,19 @@
 # ***Food and Recipes***
 
 ## **Description**   
-Welcome to our project! This is a Food and Recipes app made with a Bulma framework. It allows users to search an ingredient and receive the nutrition information and recipes based on the ingredient they choose. 
+Welcome to our project! This is a Food and Recipes site made with a Bulma framework. It allows users to search an ingredient, receive the nutrition information and recipes based on the ingredient they choose. They may also save recipes to their favorites or remove them.
 
 ## **Key Topics**
 - Ingredient search
 - Ingredient saved to local to use again
 - Recipe displayed based on your ingredient searched
-- Save your favorite recipes
+- Save your favorite recipes or remove favorites saved
 
 ## **How to Use the Project**
 
 - [How to video of our site](https://app.screencast.com/PwYaImigU4gDg)
 
+- [Food and Recipes site](https://salidamaharjan.github.io/food-and-recipe/)
 
 - When you start, enter an ingredient into the search field.
     ![Alt text](<assets/images/1st view.png>)
