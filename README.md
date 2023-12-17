@@ -11,7 +11,7 @@ Welcome to our project! This is a Food and Recipes site made with a Bulma framew
 
 ## **How to Use the Project**
 
-- [A video of how our site works](https://app.screencast.com/24QE8ioeHJ6PG)
+- [A video of how our site works](https://app.screencast.com/cvXFsfq85evyw)
 
 - [Food and Recipes site](https://salidamaharjan.github.io/food-and-recipe/)
 
